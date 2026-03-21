@@ -303,7 +303,7 @@
   .channel-icon { width: 44px; height: 44px; background: rgba(201,169,110,0.1); display: flex; align-items: center; justify-content: center; font-size: 1.1rem; flex-shrink: 0; }
   .channel-text label { display: block; font-size: 0.63rem; letter-spacing: 0.2em; color: var(--gold); margin-bottom: 3px; font-weight: 500; cursor: pointer; }
   .channel-text { min-width: 0; flex: 1; overflow: hidden; }
-.ch-val { font-size: 0.9rem; color: var(--white); font-family: 'Noto Serif KR', serif; font-weight: 400; word-break: break-all; overflow-wrap: break-word; max-width: 100%; display: block; }
+.ch-val { font-size: 0.95rem; color: var(--white); font-family: 'Noto Serif KR', serif; font-weight: 400; word-break: break-all; overflow-wrap: anywhere; display: block; line-height: 1.4; }
   .channel-text .ch-sub { font-size: 0.7rem; color: var(--text-muted); margin-top: 2px; }
 
   /* ── FOOTER ── */
@@ -409,7 +409,7 @@
     .hero-char-img { max-height: 220px; }
     .contact-card-box { padding: 18px 14px; }
     .contact-card-box h3 { font-size: 1.05rem; }
-    .ch-val { font-size: 0.82rem; }
+    .ch-val { font-size: 0.95rem; color: var(--white); font-family: 'Noto Serif KR', serif; font-weight: 400; word-break: break-all; overflow-wrap: anywhere; display: block; line-height: 1.4; }
     .channel { padding: 14px 14px; gap: 12px; }
     .channel-icon { width: 34px; height: 34px; font-size: 0.95rem; flex-shrink: 0; }
   }
@@ -475,7 +475,7 @@
     </p>
     <div class="hero-actions">
       <a href="tel:010-3273-8199" class="btn-primary">📞 010-3273-8199</a>
-      <a href="#" onclick="openKakao();return false;" class="btn-secondary">카카오톡 상담</a>
+      <a role="button" onclick="openKakao()" class="btn-secondary" style="cursor:pointer;">카카오톡 상담</a>
     </div>
   </div>
   <div class="hero-visual">
@@ -612,11 +612,11 @@
       <div class="channel-icon">📞</div>
       <div class="channel-text"><label>전화 상담</label><div class="ch-val">010-3273-8199</div><div class="ch-sub">대표 탐정사 정우열 직통</div></div>
     </a>
-    <a href="#" onclick="openKakao();return false;" class="channel">
+    <a role="button" onclick="openKakao()" class="channel" style="cursor:pointer;">
       <div class="channel-icon">💬</div>
       <div class="channel-text"><label>카카오톡 상담</label><div class="ch-val">qjdduf3586</div><div class="ch-sub">클릭하면 친구추가 페이지로 이동</div></div>
     </a>
-    <a href="#" onclick="openEmail();return false;" class="channel">
+    <a role="button" onclick="openEmail()" class="channel" style="cursor:pointer;">
       <div class="channel-icon">✉️</div>
       <div class="channel-text"><label>이메일 상담</label><div class="ch-val">qjdduf&#64;naver.com</div><div class="ch-sub">클릭하면 메일 앱이 열립니다</div></div>
     </a>
@@ -648,7 +648,7 @@
 
 <!-- ── FLOATING CTA ── -->
 <div class="floating-cta">
-  <a href="#" onclick="openKakao();return false;" class="float-btn float-btn-kakao">💬 카카오톡 상담</a>
+  <a role="button" onclick="openKakao()" class="float-btn float-btn-kakao" style="cursor:pointer;">💬 카카오톡 상담</a>
   <a href="tel:010-3273-8199" class="float-btn float-btn-tel">📞 전화 상담</a>
 </div>
 
@@ -656,52 +656,43 @@
   // ── 카카오톡 열기 (PC/모바일 공통) ──
   function openKakao() {
     var id = 'qjdduf3586';
-    var ua = navigator.userAgent.toLowerCase();
-    var isMobile = /android|iphone|ipad|ipod/.test(ua);
-
-    if (isMobile) {
-      // 모바일: a태그 동적 생성 후 클릭 (가장 확실한 방법)
-      var a = document.createElement('a');
-      a.href = 'kakaotalk://open/id/' + id;
-      a.style.display = 'none';
-      document.body.appendChild(a);
-      a.click();
-      document.body.removeChild(a);
-      // 1.2초 후 모달도 표시 (앱 없는 경우 대비)
-      setTimeout(function() { showKakaoModal(id); }, 1200);
-    } else {
-      // PC: 바로 모달
-      showKakaoModal(id);
-    }
+    // 항상 모달 먼저 표시 (PC/모바일 공통)
+    showKakaoModal(id);
   }
 
   // ── 카카오 안내 모달 ──
   function showKakaoModal(id) {
-    // 기존 모달 제거
     var existing = document.getElementById('kakaoModal');
     if (existing) existing.remove();
 
+    var ua = navigator.userAgent.toLowerCase();
+    var isMobile = /android|iphone|ipad|ipod/.test(ua);
+    var isAndroid = /android/.test(ua);
+
+    // 모바일용 앱 실행 버튼 HTML
+    var appBtnHtml = isMobile
+      ? '<a href="kakaotalk://open/id/' + id + '" style="display:block;width:100%;background:#FEE500;color:#000;padding:14px;font-size:0.9rem;font-weight:700;letter-spacing:0.1em;text-align:center;text-decoration:none;font-family:Noto Sans KR,sans-serif;margin-bottom:10px;box-sizing:border-box;">💬 카카오톡 앱 열기</a>'
+      : '';
+
     var modal = document.createElement('div');
     modal.id = 'kakaoModal';
-    modal.style.cssText = 'position:fixed;inset:0;background:rgba(0,0,0,0.75);z-index:99999;display:flex;align-items:center;justify-content:center;padding:20px;';
+    modal.style.cssText = 'position:fixed;inset:0;background:rgba(0,0,0,0.82);z-index:99999;display:flex;align-items:center;justify-content:center;padding:20px;';
     modal.innerHTML = [
-      '<div style="background:#1a1a1a;border:1px solid #c9a96e;max-width:340px;width:100%;padding:36px 28px;text-align:center;font-family:Noto Sans KR,sans-serif;">',
-        '<div style="font-size:2.5rem;margin-bottom:12px;">💬</div>',
-        '<h3 style="color:#f5f0e8;font-size:1.1rem;font-weight:700;margin-bottom:8px;font-family:Noto Serif KR,serif;">카카오톡 친구추가</h3>',
-        '<p style="color:#7a7570;font-size:0.82rem;line-height:1.7;margin-bottom:20px;">카카오톡 앱에서 아래 ID로<br>친구추가 후 상담하세요</p>',
-        '<div style="background:#0a0a0a;border:1px solid rgba(201,169,110,0.3);padding:14px;margin-bottom:20px;">',
-          '<div style="color:#7a7570;font-size:0.65rem;letter-spacing:0.2em;margin-bottom:6px;">카카오톡 ID</div>',
-          '<div style="color:#c9a96e;font-size:1.3rem;font-weight:700;letter-spacing:0.05em;" id="kakaoIdText">' + id + '</div>',
+      '<div style="background:#1a1a1a;border:1px solid #c9a96e;max-width:340px;width:100%;padding:32px 24px;text-align:center;font-family:Noto Sans KR,sans-serif;border-radius:2px;">',
+        '<div style="font-size:2.2rem;margin-bottom:10px;">💬</div>',
+        '<h3 style="color:#f5f0e8;font-size:1.05rem;font-weight:700;margin-bottom:6px;">카카오톡 상담</h3>',
+        '<p style="color:#7a7570;font-size:0.8rem;line-height:1.7;margin-bottom:18px;">아래 ID로 카카오톡 친구추가 후<br>상담 문의해 주세요</p>',
+        '<div style="background:#0a0a0a;border:1px solid rgba(201,169,110,0.3);padding:12px 16px;margin-bottom:16px;">',
+          '<div style="color:#7a7570;font-size:0.62rem;letter-spacing:0.2em;margin-bottom:5px;">카카오톡 ID</div>',
+          '<div style="color:#c9a96e;font-size:1.25rem;font-weight:700;letter-spacing:0.05em;">' + id + '</div>',
         '</div>',
-        '<button onclick="copyKakaoId()" style="width:100%;background:#FEE500;color:#000;border:none;padding:13px;font-size:0.88rem;font-weight:700;letter-spacing:0.1em;cursor:pointer;font-family:Noto Sans KR,sans-serif;margin-bottom:10px;" id="copyBtn">📋 ID 복사하기</button>',
+        appBtnHtml,
+        '<button onclick="copyKakaoId()" style="width:100%;background:' + (isMobile ? '#222' : '#FEE500') + ';color:' + (isMobile ? '#c9a96e' : '#000') + ';border:1px solid rgba(201,169,110,0.3);padding:13px;font-size:0.88rem;font-weight:700;letter-spacing:0.1em;cursor:pointer;font-family:Noto Sans KR,sans-serif;margin-bottom:10px;" id="copyBtn">📋 ID 복사하기</button>',
         '<button onclick="document.getElementById('kakaoModal').remove()" style="width:100%;background:transparent;color:#7a7570;border:1px solid rgba(255,255,255,0.1);padding:11px;font-size:0.82rem;cursor:pointer;font-family:Noto Sans KR,sans-serif;">닫기</button>',
       '</div>'
     ].join('');
 
-    // 배경 클릭시 닫기
-    modal.addEventListener('click', function(e) {
-      if (e.target === modal) modal.remove();
-    });
+    modal.addEventListener('click', function(e) { if (e.target === modal) modal.remove(); });
     document.body.appendChild(modal);
   }
 
@@ -738,19 +729,8 @@
     var d = 'naver.com';
     var addr = u + '@' + d;
     var subject = encodeURIComponent('예담탐정 상담 문의');
-
-    // 모달 먼저 띄우기 (PC/모바일 모두)
+    // 항상 모달 먼저 표시
     showEmailModal(addr, subject);
-
-    // a태그 동적 생성으로 mailto 실행 (모바일 호환)
-    setTimeout(function() {
-      var a = document.createElement('a');
-      a.href = 'mailto:' + addr + '?subject=' + subject;
-      a.style.display = 'none';
-      document.body.appendChild(a);
-      a.click();
-      document.body.removeChild(a);
-    }, 300);
   }
 
   function showEmailModal(addr, subject) {
@@ -759,17 +739,17 @@
 
     var modal = document.createElement('div');
     modal.id = 'emailModal';
-    modal.style.cssText = 'position:fixed;inset:0;background:rgba(0,0,0,0.8);z-index:99999;display:flex;align-items:center;justify-content:center;padding:20px;';
+    modal.style.cssText = 'position:fixed;inset:0;background:rgba(0,0,0,0.82);z-index:99999;display:flex;align-items:center;justify-content:center;padding:20px;';
     modal.innerHTML = [
-      '<div style="background:#1a1a1a;border:1px solid #c9a96e;max-width:340px;width:100%;padding:36px 28px;text-align:center;font-family:Noto Sans KR,sans-serif;position:relative;">',
-        '<div style="font-size:2.5rem;margin-bottom:12px;">✉️</div>',
-        '<h3 style="color:#f5f0e8;font-size:1.1rem;font-weight:700;margin-bottom:8px;">이메일 상담</h3>',
-        '<p style="color:#7a7570;font-size:0.82rem;line-height:1.7;margin-bottom:20px;">아래 주소로 문의 메일을 보내주세요.<br>모바일은 메일 앱이 자동으로 열립니다.</p>',
-        '<div style="background:#0a0a0a;border:1px solid rgba(201,169,110,0.3);padding:14px;margin-bottom:16px;">',
-          '<div style="color:#7a7570;font-size:0.65rem;letter-spacing:0.2em;margin-bottom:6px;">이메일 주소</div>',
-          '<div style="color:#c9a96e;font-size:1rem;font-weight:700;">' + addr + '</div>',
+      '<div style="background:#1a1a1a;border:1px solid #c9a96e;max-width:340px;width:100%;padding:32px 24px;text-align:center;font-family:Noto Sans KR,sans-serif;border-radius:2px;">',
+        '<div style="font-size:2.2rem;margin-bottom:10px;">✉️</div>',
+        '<h3 style="color:#f5f0e8;font-size:1.05rem;font-weight:700;margin-bottom:6px;">이메일 상담</h3>',
+        '<p style="color:#7a7570;font-size:0.8rem;line-height:1.7;margin-bottom:18px;">아래 주소로 문의 메일을 보내주세요</p>',
+        '<div style="background:#0a0a0a;border:1px solid rgba(201,169,110,0.3);padding:12px 16px;margin-bottom:16px;">',
+          '<div style="color:#7a7570;font-size:0.62rem;letter-spacing:0.2em;margin-bottom:5px;">이메일 주소</div>',
+          '<div style="color:#c9a96e;font-size:0.95rem;font-weight:700;word-break:break-all;">' + addr + '</div>',
         '</div>',
-        '<a href="mailto:' + addr + '?subject=' + subject + '" style="display:block;width:100%;background:#c9a96e;color:#000;border:none;padding:13px;font-size:0.88rem;font-weight:700;letter-spacing:0.1em;cursor:pointer;font-family:Noto Sans KR,sans-serif;margin-bottom:10px;text-decoration:none;box-sizing:border-box;">✉️ 메일 앱으로 보내기</a>',
+        '<a href="mailto:' + addr + '?subject=' + subject + '" style="display:block;width:100%;background:#c9a96e;color:#000;padding:14px;font-size:0.9rem;font-weight:700;letter-spacing:0.1em;text-align:center;text-decoration:none;font-family:Noto Sans KR,sans-serif;margin-bottom:10px;box-sizing:border-box;">✉️ 메일 앱으로 보내기</a>',
         '<button onclick="copyEmailAddr()" style="width:100%;background:#222;color:#c9a96e;border:1px solid rgba(201,169,110,0.3);padding:12px;font-size:0.85rem;font-weight:700;cursor:pointer;font-family:Noto Sans KR,sans-serif;margin-bottom:10px;" id="copyEmailBtn">📋 주소 복사하기</button>',
         '<button onclick="document.getElementById('emailModal').remove()" style="width:100%;background:transparent;color:#7a7570;border:1px solid rgba(255,255,255,0.1);padding:11px;font-size:0.82rem;cursor:pointer;font-family:Noto Sans KR,sans-serif;">닫기</button>',
       '</div>'
