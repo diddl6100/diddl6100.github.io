@@ -1,0 +1,1270 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>예담탐정 | 탐정 상담·사람찾기·외도상담·심리상담 — 대표 정우열</title>
+<meta name="description" content="예담탐정은 사람찾기, 외도상담, 사실확인, 심리상담을 함께하는 탐정입니다.">
+<meta name="keywords" content="탐정,흥신소,사람찾기,외도상담,심리상담,사실확인,증거수집,탐정상담,예담탐정,정우열탐정">
+<meta name="robots" content="index, follow">
+<meta property="og:title"       content="예담탐정 | 문제보다 마음을 먼저 살핍니다">
+<meta property="og:description" content="탐정 상담과 심리상담을 함께하는 예담탐정. 대표 정우열, 사람찾기·외도상담·사실확인 상담.">
+<meta property="og:type"        content="website">
+<meta property="og:locale"      content="ko_KR">
+<meta property="og:image" content="https://diddl6100.github.io/og-image-latest.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://diddl6100.github.io/og-image-latest.png">
+<meta name="theme-color"        content="#2b1815">
+<link rel="icon" href="favicon-latest.png">
+<link rel="icon" href="favicon-latest.png">
+<link rel="apple-touch-icon" href="apple-touch-icon-latest.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300;400;500;600&family=Noto+Sans+KR:wght@300;400;500&family=Playfair+Display:ital,wght@0,500;1,400&display=swap" rel="stylesheet">
+<!-- JSON-LD 구조화 데이터 -->
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"LocalBusiness","name":"예담탐정","description":"사실 확인과 심리상담을 함께 생각하는 탐정. 사람찾기, 외도상담, 증거수집, 탐정심리상담 전문.","telephone":"010-3273-8199","email":"qjdduf@naver.com","founder":{"@type":"Person","name":"정우열"},"address":{"@type":"PostalAddress","addressCountry":"KR"},"openingHours":"Mo-Su 09:00-22:00"}
+</script>
+
+<style>
+/* ═══════════════════════════════════════
+   0. CSS 변수 & 리셋
+═══════════════════════════════════════ */
+:root {
+  --ink:       #0c0a08;
+  --ink-2:     #181410;
+  --bg:        #f5f2ed;
+  --bg-warm:   #ede7dc;
+  --bg-dark:   #110e0a;
+  --gold:      #b6946a;
+  --gold-lt:   #d0a878;
+  --gold-dk:   #8a6e46;
+  --gold-pale: rgba(182,148,106,.12);
+  --cream:     #faf6f0;
+  --muted:     #78705e;
+  --bdlt:      rgba(0,0,0,.07);
+  --bdgd:      rgba(182,148,106,.18);
+  --serif:     'Noto Serif KR',Georgia,serif;
+  --sans:      'Noto Sans KR',sans-serif;
+  --disp:      'Playfair Display','Noto Serif KR',serif;
+  --ease:      cubic-bezier(.4,0,.2,1);
+  --dur:       .24s;
+  --r:         3px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{font-size:16px;scroll-behavior:smooth}
+body{
+  font-family:var(--sans);background:var(--bg);color:var(--ink);
+  line-height:1.7;-webkit-font-smoothing:antialiased;
+  word-break:keep-all;overflow-wrap:break-word;
+}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{cursor:pointer;border:none;background:none;font-family:inherit;word-break:keep-all}
+
+/* ─ 래퍼 ─ */
+.W  {width:min(1080px,92%);margin:0 auto}
+.Ws {width:min(760px,92%);margin:0 auto}
+
+/* ═══════════════════════════════════════
+   1. NAV
+═══════════════════════════════════════ */
+.nav{
+  position:fixed;top:0;left:0;right:0;z-index:200;
+  background:rgba(12,10,8,.94);
+  backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);
+  border-bottom:1px solid rgba(182,148,106,.12);
+  transition:background var(--dur) var(--ease);
+}
+.nav.on{background:rgba(12,10,8,.99)}
+.nav__row{
+  display:flex;align-items:center;justify-content:space-between;
+  height:64px;width:min(1080px,92%);margin:0 auto;gap:24px;
+}
+/* 로고 영역 */
+.nav__brand{display:flex;align-items:center;gap:10px;flex-shrink:0;text-decoration:none}
+/* YD + 방패 SVG 로고 */
+.nav__logo{width:34px;height:38px;flex-shrink:0}
+.nav__bname{
+  font-family:var(--serif);font-size:15px;font-weight:500;
+  color:#f0e6d2;letter-spacing:.07em;white-space:nowrap;line-height:1.2;
+}
+.nav__bname small{
+  display:block;font-size:9.5px;font-weight:300;
+  letter-spacing:.2em;color:var(--gold);text-transform:uppercase;margin-top:1px;
+}
+/* 메뉴 */
+.nav__ul{display:flex;align-items:center;gap:26px;list-style:none;flex:1;justify-content:center}
+.nav__ul a{
+  font-size:13px;font-weight:400;color:rgba(240,230,210,.64);
+  letter-spacing:.04em;transition:color var(--dur) var(--ease);white-space:nowrap;
+}
+.nav__ul a:hover{color:var(--gold-lt)}
+/* 우측 CTA */
+.nav__tel{
+  display:flex;align-items:center;gap:7px;
+  font-size:13px;font-weight:500;color:var(--gold);
+  border:1px solid rgba(182,148,106,.32);
+  padding:7px 16px;border-radius:var(--r);letter-spacing:.04em;
+  transition:all var(--dur) var(--ease);white-space:nowrap;flex-shrink:0;
+}
+.nav__tel:hover{background:var(--gold-pale);border-color:var(--gold)}
+/* 햄버거 */
+.nav__ham{display:none;flex-direction:column;gap:5px;padding:4px;flex-shrink:0}
+.nav__ham span{
+  display:block;width:22px;height:1.5px;
+  background:rgba(240,230,210,.8);border-radius:2px;
+  transition:all var(--dur) var(--ease);
+}
+.nav__ham.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+.nav__ham.open span:nth-child(2){opacity:0;transform:scaleX(0)}
+.nav__ham.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+/* 모바일 드롭다운 */
+.nav__mob{
+  display:none;position:fixed;top:64px;left:0;right:0;
+  background:rgba(12,10,8,.98);backdrop-filter:blur(20px);
+  border-bottom:1px solid rgba(182,148,106,.12);
+  flex-direction:column;z-index:199;
+  max-height:0;overflow:hidden;
+  transition:max-height .38s var(--ease);
+}
+.nav__mob.open{display:flex;max-height:440px}
+.nav__mob a{
+  display:block;padding:15px 24px;
+  font-size:14px;color:rgba(240,230,210,.72);
+  border-bottom:1px solid rgba(255,255,255,.04);
+  letter-spacing:.04em;transition:color var(--dur) var(--ease);
+}
+.nav__mob a:hover{color:var(--gold-lt)}
+.nav__mob .mob-cta{
+  margin:14px 24px 18px;text-align:center;
+  padding:12px;border:1px solid rgba(182,148,106,.32);
+  border-radius:var(--r);color:var(--gold-lt);font-size:14px;
+}
+
+/* ═══════════════════════════════════════
+   2. HERO
+═══════════════════════════════════════ */
+.hero{
+  min-height:100svh;background:var(--bg-dark);
+  display:flex;align-items:center;position:relative;
+  overflow:hidden;padding-top:64px;
+}
+.hero__grad{
+  position:absolute;inset:0;pointer-events:none;
+  background:
+    radial-gradient(ellipse 55% 60% at 72% 35%,rgba(140,108,58,.11) 0%,transparent 65%),
+    radial-gradient(ellipse 40% 50% at 18% 72%,rgba(80,58,24,.07) 0%,transparent 62%),
+    linear-gradient(180deg,transparent 55%,rgba(12,10,8,1) 100%);
+}
+.hero__noise{
+  position:absolute;inset:0;pointer-events:none;opacity:.022;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size:220px;
+}
+.hero__vline{
+  position:absolute;left:50%;top:0;bottom:0;width:1px;
+  background:linear-gradient(to bottom,transparent,rgba(182,148,106,.07) 20%,rgba(182,148,106,.07) 80%,transparent);
+  pointer-events:none;
+}
+.hero__inner{
+  position:relative;z-index:2;
+  width:min(700px,92%);margin:0 auto;
+  text-align:center;padding:88px 0 108px;
+}
+.hero__chip{
+  display:inline-flex;align-items:center;gap:12px;
+  font-size:10px;letter-spacing:.24em;text-transform:uppercase;
+  color:var(--gold);font-weight:400;margin-bottom:30px;
+}
+.hero__chip::before,.hero__chip::after{
+  content:'';width:22px;height:1px;background:var(--gold);opacity:.5;flex-shrink:0;
+}
+/* H1 — 페이지 핵심 메시지, 1개 */
+.hero__h1{
+  font-family:var(--serif);
+  font-size:clamp(28px,5vw,54px);
+  font-weight:300;line-height:1.32;
+  color:#f2e8d4;margin-bottom:20px;
+  letter-spacing:-.01em;word-break:keep-all;
+}
+.hero__h1 em{
+  font-style:italic;font-family:var(--disp);
+  color:var(--gold-lt);font-weight:400;
+}
+.hero__sub{
+  font-size:clamp(14px,1.8vw,16px);
+  color:rgba(242,232,212,.50);
+  font-weight:300;line-height:1.88;
+  margin-bottom:42px;word-break:keep-all;
+}
+.hero__btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.btn-g{
+  display:inline-flex;align-items:center;gap:8px;
+  background:var(--gold);color:#0c0a08;
+  font-size:14px;font-weight:500;letter-spacing:.06em;
+  padding:13px 28px;border-radius:var(--r);
+  transition:all var(--dur) var(--ease);font-family:var(--sans);white-space:nowrap;
+}
+.btn-g:hover{background:var(--gold-lt);transform:translateY(-1px)}
+.btn-o{
+  display:inline-flex;align-items:center;gap:8px;
+  background:transparent;color:rgba(242,232,212,.76);
+  font-size:14px;font-weight:400;letter-spacing:.06em;
+  padding:12px 28px;border:1px solid rgba(242,232,212,.18);
+  border-radius:var(--r);transition:all var(--dur) var(--ease);
+  font-family:var(--sans);white-space:nowrap;
+}
+.btn-o:hover{border-color:rgba(182,148,106,.5);color:var(--gold-lt)}
+/* 스크롤 힌트 */
+.hero__sc{
+  position:absolute;bottom:26px;left:50%;transform:translateX(-50%);
+  display:flex;flex-direction:column;align-items:center;gap:6px;
+  color:rgba(182,148,106,.32);font-size:9.5px;letter-spacing:.18em;text-transform:uppercase;
+  animation:scB 2.6s ease-in-out infinite;
+}
+.hero__sc::after{content:'';width:1px;height:30px;background:linear-gradient(to bottom,rgba(182,148,106,.32),transparent)}
+@keyframes scB{0%,100%{opacity:.5;transform:translateX(-50%) translateY(0)}50%{opacity:1;transform:translateX(-50%) translateY(4px)}}
+
+/* ═══════════════════════════════════════
+   3. TRUST STRIP
+═══════════════════════════════════════ */
+.trust{background:var(--ink-2);padding:0}
+.trust__grid{
+  width:min(1080px,92%);margin:0 auto;
+  display:grid;grid-template-columns:repeat(4,1fr);
+  gap:1px;background:rgba(182,148,106,.09);
+  border:1px solid rgba(182,148,106,.09);
+}
+.trust__card{
+  background:var(--ink-2);padding:38px 26px 34px;position:relative;
+  transition:background var(--dur) var(--ease);
+}
+.trust__card::after{
+  content:'';position:absolute;top:0;left:0;right:0;height:2px;
+  background:var(--gold);transform:scaleX(0);transform-origin:left;
+  transition:transform var(--dur) var(--ease);
+}
+.trust__card:hover{background:#1c1812}
+.trust__card:hover::after{transform:scaleX(1)}
+.trust__ico{font-size:20px;margin-bottom:14px;display:block}
+.trust__t{
+  font-family:var(--serif);font-size:15px;font-weight:500;
+  color:#f0e6d2;margin-bottom:8px;letter-spacing:.02em;word-break:keep-all;
+}
+.trust__d{font-size:13px;color:rgba(240,230,210,.44);line-height:1.72;font-weight:300;word-break:keep-all}
+/* 대표 정보 카드 — 정우열 노출 */
+.trust__rep{
+  font-size:11.5px;color:var(--gold);
+  margin-top:12px;letter-spacing:.08em;font-weight:400;
+}
+
+/* ═══════════════════════════════════════
+   4. BRAND MOOD (이미지 섹션)
+   — 범죄물 느낌 없이 따뜻한 상담 공간 분위기
+═══════════════════════════════════════ */
+.mood{
+  position:relative;height:clamp(320px,40vw,520px);
+  background:var(--ink-2);overflow:hidden;
+}
+/* SVG로 따뜻한 우드톤 상담 공간 연출 */
+.mood__bg{
+  position:absolute;inset:0;
+  background:
+    linear-gradient(135deg, #1e1608 0%, #2c1f0e 35%, #1a1208 65%, #100e08 100%);
+}
+/* 창문 빛 효과 */
+.mood__light{
+  position:absolute;
+  top:-10%;right:5%;
+  width:50%;height:140%;
+  background:linear-gradient(165deg,rgba(200,160,80,.07) 0%,transparent 55%);
+  pointer-events:none;
+}
+.mood__svg{
+  position:absolute;
+  bottom:0;left:50%;transform:translateX(-50%);
+  width:min(900px,100%);opacity:.18;
+}
+.mood__copy{
+  position:absolute;inset:0;
+  display:flex;align-items:center;justify-content:center;
+  flex-direction:column;gap:16px;text-align:center;
+  z-index:2;padding:24px;
+}
+.mood__line{width:40px;height:1px;background:var(--gold);opacity:.5;margin:0 auto}
+.mood__phrase{
+  font-family:var(--serif);
+  font-size:clamp(20px,3.2vw,34px);
+  font-weight:300;color:#f0e6d2;
+  letter-spacing:.04em;line-height:1.5;word-break:keep-all;
+}
+.mood__phrase em{font-style:italic;color:var(--gold-lt);font-family:var(--disp)}
+
+/* ═══════════════════════════════════════
+   5. WHY
+═══════════════════════════════════════ */
+.why__grid{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:80px;align-items:center;
+}
+.why__vis{position:relative}
+.why__img{
+  aspect-ratio:4/5;border-radius:var(--r);overflow:hidden;
+  background:#1c1610;position:relative;
+}
+.why__img img{
+  width:100%;height:100%;display:block;object-fit:cover;
+}
+
+.why__img-in{
+  position:absolute;inset:0;
+  display:flex;align-items:center;justify-content:center;
+  background:linear-gradient(145deg,#1e1610 0%,#2c2014 55%,#181208 100%);
+}
+/* 노트·기록 분위기 SVG */
+.why__ph{opacity:.16}
+.why__badge{
+  position:absolute;bottom:-16px;right:-16px;
+  background:var(--gold);color:#0c0a08;
+  padding:14px 18px;box-shadow:0 6px 28px rgba(0,0,0,.22);word-break:keep-all;
+}
+.why__badge-n{font-family:var(--disp);font-size:26px;font-weight:600;line-height:1;letter-spacing:-.02em;display:block;margin-bottom:2px}
+.why__badge-l{font-size:11.5px;font-weight:500;letter-spacing:.04em}
+/* 포인트 */
+.why__pts{display:flex;flex-direction:column;gap:24px;margin-top:32px}
+.why__pt{display:flex;gap:14px}
+.why__bar{width:2px;flex-shrink:0;background:var(--bdgd);border-radius:2px;margin:5px 0}
+.why__pt-t{font-family:var(--serif);font-size:15px;font-weight:500;color:var(--ink);margin-bottom:5px;word-break:keep-all}
+.why__pt-d{font-size:13.5px;color:var(--muted);line-height:1.75;font-weight:300;word-break:keep-all}
+
+/* ═══════════════════════════════════════
+   6. SERVICES
+═══════════════════════════════════════ */
+.svc__grid{
+  display:grid;grid-template-columns:repeat(4,1fr);
+  gap:14px;margin-top:48px;
+}
+.svc-card{
+  background:var(--cream);border:1px solid var(--bdlt);
+  border-radius:var(--r);padding:28px 22px 24px;
+  position:relative;overflow:hidden;
+  transition:all var(--dur) var(--ease);
+}
+.svc-card::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:2px;
+  background:var(--gold);transform:scaleX(0);transform-origin:left;
+  transition:transform var(--dur) var(--ease);
+}
+.svc-card:hover{border-color:rgba(182,148,106,.22);transform:translateY(-3px);box-shadow:0 8px 32px rgba(0,0,0,.09)}
+.svc-card:hover::before{transform:scaleX(1)}
+.svc-n{font-family:var(--disp);font-size:12px;color:var(--gold);letter-spacing:.1em;margin-bottom:16px;opacity:.6}
+.svc-ico{font-size:22px;margin-bottom:12px;display:block}
+.svc-t{font-family:var(--serif);font-size:15.5px;font-weight:500;color:var(--ink);margin-bottom:8px;line-height:1.4;word-break:keep-all}
+.svc-d{font-size:13px;color:var(--muted);line-height:1.75;font-weight:300;word-break:keep-all}
+.svc-tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:14px}
+.svc-tag{font-size:11px;color:var(--gold-dk);background:rgba(182,148,106,.09);padding:3px 8px;border-radius:2px;letter-spacing:.04em}
+
+/* ═══════════════════════════════════════
+   7. PROCESS
+═══════════════════════════════════════ */
+.proc__grid{
+  display:grid;grid-template-columns:repeat(4,1fr);
+  gap:0;margin-top:50px;position:relative;
+}
+.proc__grid::before{
+  content:'';position:absolute;
+  top:26px;left:calc(12.5% + 18px);right:calc(12.5% + 18px);
+  height:1px;
+  background:linear-gradient(to right,transparent,rgba(182,148,106,.18) 15%,rgba(182,148,106,.18) 85%,transparent);
+  z-index:0;
+}
+.proc-s{position:relative;z-index:1;padding:0 14px;text-align:center}
+.proc-n{
+  width:52px;height:52px;border:1px solid rgba(182,148,106,.26);border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  margin:0 auto 20px;font-family:var(--disp);font-size:16px;color:var(--gold);
+  background:var(--bg-dark);transition:all var(--dur) var(--ease);
+}
+.proc-s:hover .proc-n{background:rgba(182,148,106,.09);border-color:var(--gold)}
+.proc-t{font-family:var(--serif);font-size:14.5px;font-weight:500;color:#f0e6d2;margin-bottom:8px;word-break:keep-all}
+.proc-d{font-size:13px;color:rgba(240,230,210,.40);line-height:1.72;font-weight:300;word-break:keep-all}
+
+/* ═══════════════════════════════════════
+   8. BRAND QUOTE
+═══════════════════════════════════════ */
+.qt__in{max-width:700px;margin:0 auto;text-align:center}
+.qt__mark{font-family:var(--disp);font-size:76px;line-height:.38;color:var(--gold);opacity:.18;margin-bottom:26px;display:block}
+.qt__txt{
+  font-family:var(--serif);font-size:clamp(17px,2.5vw,25px);
+  font-weight:300;line-height:1.74;color:var(--ink);
+  letter-spacing:.01em;margin-bottom:22px;word-break:keep-all;
+}
+.qt__txt strong{font-weight:500;color:var(--gold-dk)}
+.qt__sub{font-size:14px;color:var(--muted);font-weight:300;line-height:1.85;word-break:keep-all}
+.qt__sig{margin-top:28px;font-size:12.5px;color:var(--gold);letter-spacing:.14em;font-family:var(--sans)}
+
+/* ═══════════════════════════════════════
+   9. FAQ
+═══════════════════════════════════════ */
+.faq__list{border-top:1px solid var(--bdlt)}
+.faq__item{border-bottom:1px solid var(--bdlt)}
+.faq__q{
+  display:flex;justify-content:space-between;align-items:flex-start;
+  gap:20px;padding:20px 0;width:100%;text-align:left;
+  font-family:var(--serif);font-size:15px;font-weight:500;
+  color:var(--ink);line-height:1.5;letter-spacing:.01em;
+  transition:color var(--dur) var(--ease);word-break:keep-all;
+}
+.faq__q:hover,.faq__q.on{color:var(--gold-dk)}
+.faq__chev{width:18px;height:18px;flex-shrink:0;margin-top:2px;color:var(--gold);transition:transform var(--dur) var(--ease)}
+.faq__q.on .faq__chev{transform:rotate(180deg)}
+.faq__a{overflow:hidden;max-height:0;transition:max-height .38s var(--ease)}
+.faq__a.on{max-height:360px}
+.faq__ai{padding:2px 0 22px;font-size:14px;color:var(--muted);line-height:1.88;font-weight:300;word-break:keep-all}
+
+/* ═══════════════════════════════════════
+   10. FINAL CTA
+═══════════════════════════════════════ */
+.cta-f{background:var(--bg-dark);padding:100px 0;position:relative;overflow:hidden}
+.cta-f__bg{
+  position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(ellipse 50% 65% at 50% 50%,rgba(138,108,52,.08) 0%,transparent 65%);
+}
+.cta-f__in{position:relative;z-index:1;width:min(800px,92%);margin:0 auto;text-align:center}
+.cta-f__h2{
+  font-family:var(--serif);font-size:clamp(22px,3vw,36px);
+  font-weight:300;color:#f2e8d4;line-height:1.44;
+  margin-bottom:12px;word-break:keep-all;
+}
+.cta-f__sub{font-size:14.5px;color:rgba(242,232,212,.44);font-weight:300;margin-bottom:48px;line-height:1.82;word-break:keep-all}
+/* 채널 카드 2×2 그리드 */
+.cta-chs{
+  display:grid;grid-template-columns:repeat(2,1fr);
+  gap:11px;margin-bottom:32px;max-width:540px;margin-left:auto;margin-right:auto;
+}
+.cta-ch{
+  display:flex;align-items:center;gap:13px;
+  background:rgba(255,255,255,.04);
+  border:1px solid rgba(182,148,106,.16);
+  border-radius:var(--r);padding:17px 20px;
+  transition:all var(--dur) var(--ease);cursor:pointer;text-align:left;width:100%;
+}
+.cta-ch:hover{background:rgba(182,148,106,.08);border-color:rgba(182,148,106,.36);transform:translateY(-2px)}
+.cta-ch__ico{font-size:19px;flex-shrink:0}
+.cta-ch__lb{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:400;margin-bottom:3px}
+.cta-ch__vl{font-size:14.5px;color:#f0e6d2;font-weight:400;letter-spacing:.02em;word-break:break-all}
+.cta-chips{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.cta-chip{font-size:12px;color:rgba(242,232,212,.28);display:flex;align-items:center;gap:5px}
+.cta-chip::before{content:'·';color:var(--gold);opacity:.4}
+
+/* ═══════════════════════════════════════
+   11. FOOTER
+═══════════════════════════════════════ */
+.footer{background:var(--ink);border-top:1px solid rgba(182,148,106,.09);padding:34px 0}
+.footer__in{
+  display:flex;justify-content:space-between;align-items:center;
+  gap:18px;flex-wrap:wrap;
+}
+.footer__brand{display:flex;align-items:center;gap:8px}
+.footer__logo{width:22px;height:24px;flex-shrink:0}
+.footer__nm{font-family:var(--serif);font-size:13px;color:rgba(240,230,210,.52);letter-spacing:.08em}
+.footer__copy{font-size:11.5px;color:rgba(240,230,210,.24);letter-spacing:.04em}
+.footer__lks{display:flex;gap:16px}
+.footer__lks a{font-size:11.5px;color:rgba(240,230,210,.30);letter-spacing:.04em;transition:color var(--dur) var(--ease)}
+.footer__lks a:hover{color:var(--gold)}
+
+/* ═══════════════════════════════════════
+   모바일 하단 고정 CTA
+═══════════════════════════════════════ */
+.sticky{
+  display:none;position:fixed;bottom:0;left:0;right:0;z-index:100;
+  background:rgba(12,10,8,.96);backdrop-filter:blur(12px);
+  border-top:1px solid rgba(182,148,106,.12);
+  padding:10px 16px;gap:8px;
+  transition:opacity var(--dur) var(--ease);
+}
+.sticky__btn{
+  flex:1;display:flex;align-items:center;justify-content:center;gap:7px;
+  padding:12px 8px;border-radius:var(--r);
+  font-size:14px;font-weight:500;letter-spacing:.04em;
+  transition:all var(--dur) var(--ease);font-family:var(--sans);
+}
+.sticky__btn--tel{background:var(--gold);color:#0c0a08}
+.sticky__btn--tel:hover{background:var(--gold-lt)}
+.sticky__btn--kk{background:#FEE500;color:#191919}
+.sticky__btn--kk:hover{filter:brightness(1.06)}
+
+/* ═══════════════════════════════════════
+   카카오 모달
+   ※ 구현 근거:
+   카카오톡 개인 ID 친구추가를 웹에서 바로 연결하는
+   공식 공개 API/URL scheme 없음.
+   kakaoplus.kakao.com = 채널(플러스친구) 전용 → 개인 ID 불가.
+   kakaotalk://open/id/{id} 딥링크 = 비공개 내부 scheme으로 불안정.
+   가장 신뢰할 수 있는 UX:
+     모바일 → kakaotalk://launch 시도(앱 열기) + ID 복사 안내 팝업
+     PC     → ID 복사 안내 팝업
+═══════════════════════════════════════ */
+.kk-bd{
+  position:fixed;inset:0;z-index:500;
+  background:rgba(0,0,0,.58);backdrop-filter:blur(4px);
+  display:flex;align-items:center;justify-content:center;padding:20px;
+  opacity:0;pointer-events:none;transition:opacity .2s var(--ease);
+}
+.kk-bd.open{opacity:1;pointer-events:auto}
+.kk-box{
+  background:#fff;border-radius:6px;
+  width:min(370px,100%);padding:28px 24px;
+  transform:translateY(10px);transition:transform .2s var(--ease);text-align:center;
+}
+.kk-bd.open .kk-box{transform:none}
+.kk-top{background:#FEE500;border-radius:4px;padding:14px;margin-bottom:22px;font-size:13px;font-weight:500;color:#191919}
+.kk-tl{font-family:var(--serif);font-size:16px;color:var(--ink);margin-bottom:7px;font-weight:500;word-break:keep-all}
+.kk-id{
+  font-size:20px;font-weight:700;color:#3a1d1d;letter-spacing:.04em;
+  background:#f5f2ed;padding:11px 18px;border-radius:4px;
+  margin:11px 0 14px;display:block;word-break:break-all;
+}
+.kk-desc{font-size:13px;color:var(--muted);line-height:1.78;margin-bottom:18px;word-break:keep-all}
+.kk-copy{
+  display:inline-flex;align-items:center;gap:7px;width:100%;justify-content:center;
+  background:var(--gold);color:#0c0a08;
+  font-size:13.5px;font-weight:500;padding:11px 22px;border-radius:var(--r);
+  transition:all var(--dur) var(--ease);cursor:pointer;border:none;font-family:var(--sans);
+  margin-bottom:8px;
+}
+.kk-copy:hover{background:var(--gold-lt)}
+.kk-copy.ok{background:#4caf50;color:#fff}
+.kk-cl{
+  font-size:12px;color:var(--muted);cursor:pointer;
+  transition:color var(--dur) var(--ease);
+  border:none;background:none;font-family:var(--sans);
+  width:100%;padding:8px 0;display:block;
+}
+.kk-cl:hover{color:var(--ink)}
+
+/* ═══════════════════════════════════════
+   페이드인
+═══════════════════════════════════════ */
+.fi{opacity:0;transform:translateY(16px);transition:opacity .62s var(--ease),transform .62s var(--ease)}
+.fi.show{opacity:1;transform:none}
+.fd1{transition-delay:.08s}.fd2{transition-delay:.16s}.fd3{transition-delay:.24s}
+
+/* ═══════════════════════════════════════
+   섹션 공통
+═══════════════════════════════════════ */
+.sec{padding:96px 0}
+.sec--dk{background:var(--bg-dark);color:#f0e6d2}
+.sec--wm{background:var(--bg-warm)}
+.sec--cm{background:var(--cream)}
+.sec__lb{font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);font-family:var(--sans);font-weight:400;margin-bottom:11px}
+.sec__h2{font-family:var(--serif);font-size:clamp(22px,3vw,34px);font-weight:400;line-height:1.38;letter-spacing:-.01em;margin-bottom:12px;word-break:keep-all}
+.sec__desc{font-size:15px;color:var(--muted);font-weight:300;line-height:1.84;max-width:490px;word-break:keep-all}
+.sec--dk .sec__h2{color:#f0e6d2}
+.sec--dk .sec__desc{color:rgba(240,230,210,.5)}
+
+/* ═══════════════════════════════════════
+   반응형
+═══════════════════════════════════════ */
+@media(max-width:920px){
+  .nav__ul{display:none}
+  .nav__tel-pc{display:none}
+  .nav__ham{display:flex}
+  .trust__grid{grid-template-columns:repeat(2,1fr)}
+  .why__grid{grid-template-columns:1fr;gap:44px}
+  .why__vis{max-width:380px;margin:0 auto}
+  .why__badge{bottom:-14px;right:-10px}
+  .svc__grid{grid-template-columns:repeat(2,1fr)}
+  .proc__grid{grid-template-columns:repeat(2,1fr);gap:38px}
+  .proc__grid::before{display:none}
+  .cta-chs{grid-template-columns:1fr;max-width:300px}
+  .sticky{display:flex}
+  .sec{padding:72px 0}
+}
+@media(max-width:560px){
+  .trust__grid{grid-template-columns:1fr;background:transparent;border:none;gap:1px}
+  .trust__card{border:1px solid rgba(182,148,106,.09)}
+  .svc__grid{grid-template-columns:1fr}
+  .proc__grid{grid-template-columns:1fr;gap:28px}
+  .hero__btns{flex-direction:column;align-items:center}
+  .btn-g,.btn-o{width:100%;max-width:260px;justify-content:center}
+  .footer__in{flex-direction:column;align-items:flex-start;gap:13px}
+  .footer__lks{flex-wrap:wrap;gap:12px}
+  .sec{padding:60px 0}
+}
+</style>
+  <meta property="og:url" content="https://diddl6100.github.io/">
+</head>
+<body>
+
+<!-- ══════════════════════════ NAV ══════════════════════════ -->
+<nav class="nav" id="mainNav" aria-label="예담탐정 내비게이션">
+  <div class="nav__row">
+
+    <!-- ① 로고 + 브랜드명 — YD 방패 형태 SVG -->
+    <a href="#hero" class="nav__brand" aria-label="예담탐정 홈">
+      <svg class="nav__logo" viewBox="0 0 34 38" fill="none" aria-hidden="true">
+        <!-- 방패 외형 -->
+        <path d="M17 1.5 L32 7.2 V19C32 28 25 34.5 17 36.5C9 34.5 2 28 2 19V7.2Z"
+              fill="#1a1410" stroke="#b6946a" stroke-width="1.2"/>
+        <!-- 방패 안쪽 테두리 (약하게) -->
+        <path d="M17 4.5 L29.5 9.4 V19C29.5 26.8 23.5 32.4 17 34.2C10.5 32.4 4.5 26.8 4.5 19V9.4Z"
+              fill="none" stroke="#b6946a" stroke-width=".4" opacity=".4"/>
+        <!-- YD 텍스트 -->
+        <text x="17" y="22.5" text-anchor="middle"
+              font-family="Playfair Display,serif" font-size="12" font-weight="600"
+              letter-spacing=".04em" fill="#b6946a">YD</text>
+      </svg>
+      <div class="nav__bname">
+        예담탐정
+        <small>Private Detective</small>
+      </div>
+    </a>
+
+    <!-- PC 메뉴 -->
+    <ul class="nav__ul" role="list">
+      <li><a href="#why">소개</a></li>
+      <li><a href="#services">상담 분야</a></li>
+      <li><a href="#process">진행 방식</a></li>
+      <li><a href="#faq">자주 묻는 질문</a></li>
+    </ul>
+
+    <!-- PC CTA -->
+    <!-- tel: 링크 → 클릭 즉시 전화 앱 호출 (PC/모바일 공통) -->
+    <a href="tel:01032738199" class="nav__tel nav__tel-pc" aria-label="전화 상담 연결">
+      📞 010-3273-8199
+    </a>
+
+    <!-- 햄버거 -->
+    <button class="nav__ham" id="navHam" aria-label="메뉴 열기/닫기" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+
+  <!-- 모바일 메뉴 -->
+  <div class="nav__mob" id="navMob" aria-label="모바일 메뉴">
+    <a href="#why"      class="nm-lk">소개</a>
+    <a href="#services" class="nm-lk">상담 분야</a>
+    <a href="#process"  class="nm-lk">진행 방식</a>
+    <a href="#faq"      class="nm-lk">자주 묻는 질문</a>
+    <a href="tel:01032738199" class="mob-cta">📞 전화 상담</a>
+  </div>
+</nav>
+
+
+<!-- ══════════════════════════ HERO ══════════════════════════ -->
+<section class="hero" id="hero">
+  <div class="hero__grad" aria-hidden="true"></div>
+  <div class="hero__noise" aria-hidden="true"></div>
+  <div class="hero__vline" aria-hidden="true"></div>
+
+  <div class="hero__inner">
+    <div class="hero__chip">예담탐정 · 대표 정우열</div>
+
+    <!-- H1: 페이지 전체에서 1개만 사용 -->
+    <h1 class="hero__h1">
+      문제보다<br><em>마음을 먼저</em> 살핍니다
+    </h1>
+
+    <p class="hero__sub">
+      탐정 상담부터 심리상담까지.<br>
+      사실 앞에 서기 전, 마음부터 정리합니다.
+    </p>
+
+    <div class="hero__btns">
+      <!-- tel: → 즉시 전화 연결 -->
+      <a href="tel:01032738199" class="btn-g">📞 전화 상담하기</a>
+      <!--
+        카카오톡 버튼:
+        개인 카카오톡 ID 친구추가를 웹에서 직접 여는 공식 URL 없음.
+        클릭 시 모달 → ID 안내 + 원터치 복사 흐름.
+      -->
+      <button class="btn-o" onclick="openKK()" aria-label="카카오톡 문의">
+        💬 카카오톡 문의
+      </button>
+    </div>
+  </div>
+
+  <div class="hero__sc" aria-hidden="true">scroll</div>
+</section>
+
+
+<!-- ══════════════════════════ TRUST STRIP ══════════════════════════ -->
+<section class="trust" aria-label="예담탐정 핵심 신뢰 포인트">
+  <div class="trust__grid">
+
+    <div class="trust__card fi">
+      <span class="trust__ico" aria-hidden="true">🔒</span>
+      <h3 class="trust__t">철저한 비밀 보장</h3>
+      <p class="trust__d">의뢰인의 상담 내용과 정보는 외부에 공유되지 않습니다.</p>
+    </div>
+
+    <!-- 1:1 직접 상담 카드에 대표자 정보 자연스럽게 포함 -->
+    <div class="trust__card fi fd1">
+      <span class="trust__ico" aria-hidden="true">👤</span>
+      <h3 class="trust__t">1:1 직접 상담</h3>
+      <p class="trust__d">처음부터 끝까지 대표가 직접 담당합니다. 중간 전달 없이 진행됩니다.</p>
+      <p class="trust__rep">대표 정우열</p>
+    </div>
+
+    <div class="trust__card fi fd2">
+      <span class="trust__ico" aria-hidden="true">⚖️</span>
+      <h3 class="trust__t">신중한 사실 확인</h3>
+      <p class="trust__d">추측이 아닌 근거 중심으로, 합법적인 범위 안에서 신중하게 진행합니다.</p>
+    </div>
+
+    <div class="trust__card fi fd3">
+      <span class="trust__ico" aria-hidden="true">🧠</span>
+      <h3 class="trust__t">심리상담 관점 접근</h3>
+      <p class="trust__d">사실 확인과 함께 의뢰인의 심리적 안정을 늘 함께 고려합니다.</p>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ══════════════════════════ BRAND MOOD (이미지 섹션) ══════════════════════════ -->
+<section class="mood" aria-label="예담탐정 브랜드 분위기">
+  <div class="mood__bg" aria-hidden="true"></div>
+  <div class="mood__light" aria-hidden="true"></div>
+
+  <!-- 따뜻한 상담 공간 분위기 SVG 일러스트 -->
+  <svg class="mood__svg" viewBox="0 0 900 300" fill="none" aria-hidden="true" preserveAspectRatio="xMidYMax meet">
+    <!-- 책상 -->
+    <rect x="150" y="220" width="600" height="8" rx="2" fill="#b6946a" opacity=".35"/>
+    <rect x="150" y="228" width="8" height="60" rx="2" fill="#b6946a" opacity=".2"/>
+    <rect x="742" y="228" width="8" height="60" rx="2" fill="#b6946a" opacity=".2"/>
+    <!-- 노트 -->
+    <rect x="310" y="175" width="90" height="48" rx="2" fill="#b6946a" opacity=".22" transform="rotate(-3 310 175)"/>
+    <line x1="318" y1="190" x2="390" y2="187" stroke="#b6946a" stroke-width="1" opacity=".18"/>
+    <line x1="318" y1="198" x2="390" y2="195" stroke="#b6946a" stroke-width="1" opacity=".18"/>
+    <line x1="318" y1="206" x2="370" y2="204" stroke="#b6946a" stroke-width="1" opacity=".18"/>
+    <!-- 펜 -->
+    <rect x="405" y="185" width="4" height="38" rx="2" fill="#b6946a" opacity=".3" transform="rotate(12 405 185)"/>
+    <!-- 커피잔 -->
+    <ellipse cx="540" cy="218" rx="18" ry="5" fill="#b6946a" opacity=".18"/>
+    <rect x="522" y="192" width="36" height="26" rx="4" fill="#b6946a" opacity=".15"/>
+    <path d="M558 200 Q572 205 558 212" stroke="#b6946a" stroke-width="2" fill="none" opacity=".2"/>
+    <!-- 창문 (우측) -->
+    <rect x="680" y="60" width="120" height="160" rx="2" fill="#b6946a" opacity=".06"/>
+    <line x1="740" y1="60" x2="740" y2="220" stroke="#b6946a" stroke-width="1" opacity=".12"/>
+    <line x1="680" y1="140" x2="800" y2="140" stroke="#b6946a" stroke-width="1" opacity=".12"/>
+    <!-- 빛 줄기 -->
+    <polygon points="680,60 800,60 840,220 620,220" fill="url(#wl)" opacity=".08"/>
+    <defs>
+      <linearGradient id="wl" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#c8a060" stop-opacity="1"/>
+        <stop offset="100%" stop-color="#c8a060" stop-opacity="0"/>
+      </linearGradient>
+    </defs>
+  </svg>
+
+  <!-- 브랜드 문구 오버레이 -->
+  <div class="mood__copy">
+    <div class="mood__line" aria-hidden="true"></div>
+    <p class="mood__phrase">
+      사실 앞에 서기 전,<br><em>마음부터 정리합니다</em>
+    </p>
+    <div class="mood__line" aria-hidden="true"></div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════ WHY ══════════════════════════ -->
+<section class="sec" id="why" aria-label="예담탐정이 다른 이유">
+  <div class="W">
+    <div class="why__grid">
+
+      <!-- 좌: 비주얼 -->
+      <div class="why__vis fi">
+        <div class="why__img">
+          <img src="yedam-latest-assets/a_photograph_showcases_a_warmly_lit_consultation_s.png" alt="따뜻한 조명 아래 상담 테이블과 노트가 놓인 예담탐정 상담 공간 이미지">
+        </div>
+        <div class="why__badge">
+          <span class="why__badge-n">10+</span>
+          <span class="why__badge-l">년 현장 경험</span>
+        </div>
+      </div>
+
+      <!-- 우: 텍스트 -->
+      <div>
+        <p class="sec__lb">왜 예담탐정인가</p>
+        <h2 class="sec__h2 fi">
+          일반 탐정·흥신소와<br>다른 방식으로 접근합니다
+        </h2>
+        <p class="sec__desc fi">
+          예담탐정은 단순히 사실을 수집하는 것을 넘어,
+          의뢰인이 그 결과를 어떻게 받아들이고
+          이후 어떤 선택을 할지까지 함께 생각합니다.
+        </p>
+        <div class="why__pts">
+          <div class="why__pt fi fd1">
+            <div class="why__bar"></div>
+            <div>
+              <h3 class="why__pt-t">감정이 아닌 기준으로 판단합니다</h3>
+              <p class="why__pt-d">충동적 결정이 아닌, 정확한 사실 확인 후 의뢰인 스스로 결정을 내릴 수 있도록 돕습니다.</p>
+            </div>
+          </div>
+          <div class="why__pt fi fd2">
+            <div class="why__bar"></div>
+            <div>
+              <h3 class="why__pt-t">조사와 심리상담을 함께 합니다</h3>
+              <p class="why__pt-d">사실을 아는 것과 그것을 수용하는 것은 별개의 과정입니다. 조사 전후 심리적 공백까지 함께 고려합니다.</p>
+            </div>
+          </div>
+          <div class="why__pt fi fd3">
+            <div class="why__bar"></div>
+            <div>
+              <h3 class="why__pt-t">합법적인 범위 안에서, 과하지 않게</h3>
+              <p class="why__pt-d">예담탐정은 현행 기준을 바탕으로 합법적인 범위 안에서만 진행합니다. 무리한 조사나 위법 소지가 있는 방식은 지양합니다.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════ SERVICES ══════════════════════════ -->
+<section class="sec sec--wm" id="services" aria-label="예담탐정 상담 분야">
+  <div class="W">
+    <p class="sec__lb">상담 분야</p>
+    <h2 class="sec__h2 fi">
+      어떤 상황에서 오셔도<br>조심스럽게 함께합니다
+    </h2>
+
+    <div class="svc__grid">
+
+      <article class="svc-card fi">
+        <div class="svc-n">01</div>
+        <span class="svc-ico" aria-hidden="true">🧭</span>
+        <h3 class="svc-t">사람찾기 · 소재 파악</h3>
+        <p class="svc-d">연락이 끊긴 가족, 지인, 채무자의 소재를 신중하고 합법적인 방법으로 확인합니다.</p>
+        <div class="svc-tags">
+          <span class="svc-tag">사람찾기</span>
+          <span class="svc-tag">가출인</span>
+          <span class="svc-tag">소재확인</span>
+        </div>
+      </article>
+
+      <article class="svc-card fi fd1">
+        <div class="svc-n">02</div>
+        <span class="svc-ico" aria-hidden="true">📋</span>
+        <h3 class="svc-t">사실확인 · 증거수집</h3>
+        <p class="svc-d">추측만으로 판단하기 어려운 상황에서 사실에 근거한 자료를 체계적으로 정리합니다.</p>
+        <div class="svc-tags">
+          <span class="svc-tag">사실확인</span>
+          <span class="svc-tag">증거수집</span>
+          <span class="svc-tag">배경조사</span>
+        </div>
+      </article>
+
+      <article class="svc-card fi fd2">
+        <div class="svc-n">03</div>
+        <span class="svc-ico" aria-hidden="true">💬</span>
+        <h3 class="svc-t">외도상담 · 관계 상담</h3>
+        <p class="svc-d">배우자 또는 파트너의 의심스러운 상황. 감정적 판단 이전에 사실을 먼저 확인합니다.</p>
+        <div class="svc-tags">
+          <span class="svc-tag">외도상담</span>
+          <span class="svc-tag">배우자조사</span>
+          <span class="svc-tag">관계확인</span>
+        </div>
+      </article>
+
+      <article class="svc-card fi fd3">
+        <div class="svc-n">04</div>
+        <span class="svc-ico" aria-hidden="true">🌿</span>
+        <h3 class="svc-t">탐정 심리상담</h3>
+        <p class="svc-d">조사 전후로 심리적 안정을 위한 상담을 함께 진행합니다. 예담탐정만의 핵심 접근입니다.</p>
+        <div class="svc-tags">
+          <span class="svc-tag">심리상담</span>
+          <span class="svc-tag">감정정리</span>
+          <span class="svc-tag">사후상담</span>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════ PROCESS ══════════════════════════ -->
+<section class="sec sec--dk" id="process" aria-label="예담탐정 진행 방식">
+  <div class="W">
+    <p class="sec__lb">진행 방식</p>
+    <h2 class="sec__h2 fi">
+      처음부터 끝까지<br>신중하게 진행합니다
+    </h2>
+    <div class="proc__grid">
+      <div class="proc-s fi">
+        <div class="proc-n">1</div>
+        <h3 class="proc-t">비밀 상담 접수</h3>
+        <p class="proc-d">전화·카카오톡·텔레그램으로 상담이 가능합니다. 현재 상황을 있는 그대로 이야기해 주세요.</p>
+      </div>
+      <div class="proc-s fi fd1">
+        <div class="proc-n">2</div>
+        <h3 class="proc-t">상황 정리 및 방향 설정</h3>
+        <p class="proc-d">의뢰인의 상황을 충분히 듣고, 필요한 정보와 진행 방향을 함께 정리합니다.</p>
+      </div>
+      <div class="proc-s fi fd2">
+        <div class="proc-n">3</div>
+        <h3 class="proc-t">신중한 조사 진행</h3>
+        <p class="proc-d">합법적인 범위 안에서 신중하게 진행합니다. 과정은 실시간으로 공유됩니다.</p>
+      </div>
+      <div class="proc-s fi fd3">
+        <div class="proc-n">4</div>
+        <h3 class="proc-t">결과 전달 및 사후 상담</h3>
+        <p class="proc-d">결과를 정확하게 전달하고, 이후 판단과 심리적 정리를 함께 이야기합니다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════ BRAND QUOTE ══════════════════════════ -->
+<section class="sec sec--wm" aria-label="예담탐정 브랜드 철학">
+  <div class="Ws">
+    <div class="qt__in">
+      <span class="qt__mark fi" aria-hidden="true">"</span>
+      <p class="qt__txt fi">
+        혼자 판단하기 어려운 순간이 있습니다.<br>
+        <strong>예담탐정은 그 순간, 사실과 마음을 함께 봅니다.</strong>
+      </p>
+      <p class="qt__sub fi">
+        조심스럽게 문의해 주세요.<br>
+        상담 내용은 어떤 상황에서도 외부로 나가지 않습니다.
+      </p>
+      <div class="qt__sig fi">— 예담탐정 대표 정우열</div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════ FAQ ══════════════════════════ -->
+<section class="sec" id="faq" aria-label="예담탐정 자주 묻는 질문">
+  <div class="Ws">
+    <p class="sec__lb">자주 묻는 질문</p>
+    <h2 class="sec__h2 fi">
+      탐정과 흥신소, 상담 전<br>궁금한 것들
+    </h2>
+
+    <div class="faq__list" role="list">
+
+      <div class="faq__item" role="listitem">
+        <button class="faq__q" aria-expanded="false" aria-controls="fa1">
+          탐정과 흥신소는 어떤 차이가 있나요?
+          <svg class="faq__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="faq__a" id="fa1" role="region">
+          <p class="faq__ai">
+            많은 분들이 탐정과 흥신소를 비슷하게 생각하십니다. 그러나 실제로는 이름보다 상담을 어떤 기준과 태도로 진행하는지가 더 중요합니다. 예담탐정은 현재 상황을 차분히 정리하고, 합법적인 범위 안에서 신중하게 상담과 사실확인을 진행합니다.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq__item" role="listitem">
+        <button class="faq__q" aria-expanded="false" aria-controls="fa2">
+          사람찾기 상담 전 무엇을 준비하면 좋을까요?
+          <svg class="faq__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="faq__a" id="fa2" role="region">
+          <p class="faq__ai">찾는 분의 성함, 나이, 마지막 연락 시기, 알고 계신 거주지나 직장 정보를 미리 정리해 두시면 상담이 더 구체적으로 진행됩니다. 정보가 많지 않아도 상담은 가능합니다. 현재 상황을 있는 그대로 말씀해 주세요.</p>
+        </div>
+      </div>
+
+      <div class="faq__item" role="listitem">
+        <button class="faq__q" aria-expanded="false" aria-controls="fa3">
+          외도상담은 어떤 방식으로 진행되나요?
+          <svg class="faq__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="faq__a" id="fa3" role="region">
+          <p class="faq__ai">먼저 비밀 상담을 통해 의심 근거와 상황을 함께 정리합니다. 이후 합법적인 방법으로 사실 확인을 진행하고, 결과를 조심스럽게 전달합니다. 필요한 경우 결과 이후 심리적 충격을 줄이기 위한 사후 상담도 함께 진행할 수 있습니다.</p>
+        </div>
+      </div>
+
+      <div class="faq__item" role="listitem">
+        <button class="faq__q" aria-expanded="false" aria-controls="fa4">
+          심리상담도 함께 받을 수 있나요?
+          <svg class="faq__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="faq__a" id="fa4" role="region">
+          <p class="faq__ai">예담탐정의 핵심 접근 방식입니다. 조사 결과를 받은 이후 심리적으로 힘든 시간이 오는 경우가 많습니다. 조사 전 마음을 정리하거나, 결과를 받아들이는 과정에서 심리상담을 함께 요청하실 수 있습니다.</p>
+        </div>
+      </div>
+
+      <div class="faq__item" role="listitem">
+        <button class="faq__q" aria-expanded="false" aria-controls="fa5">
+          비밀 보장은 어떻게 이루어지나요?
+          <svg class="faq__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="faq__a" id="fa5" role="region">
+          <p class="faq__ai">의뢰인의 인적 사항, 상담 내용, 의뢰 사실 자체가 외부에 노출되지 않도록 철저히 관리합니다. 기록은 최소화하고, 완료 후 관련 자료는 안전하게 처리됩니다. 텔레그램을 통한 익명 상담도 가능합니다.</p>
+        </div>
+      </div>
+
+      <div class="faq__item" role="listitem">
+        <button class="faq__q" aria-expanded="false" aria-controls="fa6">
+          비용은 어떻게 결정되나요?
+          <svg class="faq__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="faq__a" id="fa6" role="region">
+          <p class="faq__ai">상담 후 현재 상황과 범위에 따라 진행 방향과 비용을 안내드립니다. 불필요하게 범위를 확장하거나 과도한 비용을 요구하지 않습니다.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════ FINAL CTA ══════════════════════════ -->
+<section class="cta-f" id="contact" aria-label="예담탐정 문의">
+  <div class="cta-f__bg" aria-hidden="true"></div>
+  <div class="cta-f__in">
+    <p class="sec__lb fi">문의하기</p>
+    <h2 class="cta-f__h2 fi">
+      조심스럽게 연락해 주세요.<br>먼저 듣겠습니다.
+    </h2>
+    <p class="cta-f__sub fi">
+      모든 상담 내용은 철저히 비밀이 보장됩니다.
+    </p>
+
+    <div class="cta-chs fi">
+      <!-- 전화: tel: → 즉시 전화 앱 호출 -->
+      <a href="tel:01032738199" class="cta-ch" aria-label="전화로 문의">
+        <span class="cta-ch__ico" aria-hidden="true">📞</span>
+        <div>
+          <div class="cta-ch__lb">전화 상담</div>
+          <div class="cta-ch__vl">010-3273-8199</div>
+        </div>
+      </a>
+
+      <!--
+        카카오톡: 개인 ID 친구추가 공식 웹 URL 없음 → 모달 처리.
+        모바일에서는 kakaotalk://launch 딥링크를 먼저 시도.
+      -->
+      <button class="cta-ch" onclick="openKK()" aria-label="카카오톡으로 문의">
+        <span class="cta-ch__ico" aria-hidden="true">💬</span>
+        <div>
+          <div class="cta-ch__lb">카카오톡</div>
+          <div class="cta-ch__vl">qjdduf3586</div>
+        </div>
+      </button>
+
+      <!-- 텔레그램: t.me 링크 → 앱 또는 웹 텔레그램 -->
+      <a href="https://t.me/qjdduf3586" class="cta-ch" target="_blank" rel="noopener noreferrer" aria-label="텔레그램 익명 문의">
+        <span class="cta-ch__ico" aria-hidden="true">✈️</span>
+        <div>
+          <div class="cta-ch__lb">텔레그램 (익명)</div>
+          <div class="cta-ch__vl">@qjdduf3586</div>
+        </div>
+      </a>
+
+      <!-- 이메일: mailto: → 즉시 메일 앱 호출 -->
+      <a href="mailto:qjdduf@naver.com?subject=예담탐정 상담 문의" class="cta-ch" aria-label="이메일로 문의">
+        <span class="cta-ch__ico" aria-hidden="true">✉️</span>
+        <div>
+          <div class="cta-ch__lb">이메일</div>
+          <div class="cta-ch__vl">qjdduf@naver.com</div>
+        </div>
+      </a>
+    </div>
+
+    <div class="cta-chips fi">
+      <span class="cta-chip">비밀 보장</span>
+      <span class="cta-chip">익명 가능</span>
+      <span class="cta-chip">대표 직접 상담</span>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════ FOOTER ══════════════════════════ -->
+<footer class="footer" aria-label="예담탐정 푸터">
+  <div class="W footer__in">
+    <div class="footer__brand">
+      <svg class="footer__logo" viewBox="0 0 22 24" fill="none" aria-hidden="true">
+        <path d="M11 1 L21 4.6 V12.5C21 18.5 16.5 22.5 11 23.5C5.5 22.5 1 18.5 1 12.5V4.6Z"
+              fill="#181410" stroke="#b6946a" stroke-width="1"/>
+        <text x="11" y="15" text-anchor="middle"
+              font-family="Playfair Display,serif" font-size="8" font-weight="600"
+              fill="#b6946a">YD</text>
+      </svg>
+      <span class="footer__nm">예담탐정</span>
+    </div>
+    <!-- 법적 단정 표현 제거, 대표명만 표기 -->
+    <p class="footer__copy">© 2026 예담탐정 | 대표 정우열</p>
+    <nav class="footer__lks" aria-label="푸터 링크">
+      <a href="#why">소개</a>
+      <a href="#services">상담 분야</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">문의</a>
+    </nav>
+  </div>
+</footer>
+
+
+<!-- ══════════════════════════ 모바일 하단 고정 CTA ══════════════════════════ -->
+<div class="sticky" id="stickyCta" aria-label="빠른 문의">
+  <a href="tel:01032738199" class="sticky__btn sticky__btn--tel" aria-label="전화 상담">
+    📞 전화 상담
+  </a>
+  <button class="sticky__btn sticky__btn--kk" onclick="openKK()" aria-label="카카오톡 문의">
+    💬 카카오톡
+  </button>
+</div>
+
+
+<!-- ══════════════════════════ 카카오 모달 ══════════════════════════ -->
+<!--
+  카카오톡 친구추가 구현 근거:
+  ① kakao.com/channel 계열 → 카카오 채널(플러스친구) 전용, 개인 ID 불가
+  ② kakaotalk://open/id/{id} → 비공개 내부 딥링크, 불안정·앱버전 의존
+  ③ 안정적 대안: ID 복사 모달 + kakaotalk://launch(모바일 앱 열기 시도)
+  결론: 클릭 시 모달 표시 → ID 원터치 복사 → 카카오톡에서 ID 검색 안내
+-->
+<div class="kk-bd" id="kkBackdrop" role="dialog" aria-modal="true" aria-label="카카오톡 문의 안내">
+  <div class="kk-box">
+    <div class="kk-top" aria-hidden="true">💬 카카오톡으로 문의하기</div>
+    <h3 class="kk-tl">카카오톡 ID를 추가해 주세요</h3>
+    <code class="kk-id" id="kkId">qjdduf3586</code>
+    <p class="kk-desc">
+      카카오톡 앱 → 친구찾기 → ID 검색<br>
+      위 ID를 검색 후 친구 추가 → 메시지를 보내주세요.
+    </p>
+    <button class="kk-copy" id="kkCopyBtn" onclick="copyKK()">
+      📋 ID 복사하기
+    </button>
+    <button class="kk-cl" onclick="closeKK()">닫기</button>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════ JS ══════════════════════════ -->
+<script>
+// ─ 1. NAV 햄버거 ─
+const ham    = document.getElementById('navHam');
+const navMob = document.getElementById('navMob');
+ham.addEventListener('click', () => {
+  const open = navMob.classList.toggle('open');
+  ham.classList.toggle('open', open);
+  ham.setAttribute('aria-expanded', open);
+});
+navMob.querySelectorAll('a').forEach(a => {
+  a.addEventListener('click', () => {
+    navMob.classList.remove('open');
+    ham.classList.remove('open');
+    ham.setAttribute('aria-expanded', 'false');
+  });
+});
+
+// ─ 2. NAV 스크롤 ─
+let navTick = false;
+window.addEventListener('scroll', () => {
+  if (!navTick) {
+    requestAnimationFrame(() => {
+      document.getElementById('mainNav').classList.toggle('on', window.scrollY > 50);
+      navTick = false;
+    });
+    navTick = true;
+  }
+}, { passive: true });
+
+// ─ 3. FAQ 아코디언 ─
+document.querySelectorAll('.faq__q').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const item   = btn.closest('.faq__item');
+    const ans    = item.querySelector('.faq__a');
+    const isOpen = ans.classList.contains('on');
+    // 모두 닫기
+    document.querySelectorAll('.faq__a').forEach(a => a.classList.remove('on'));
+    document.querySelectorAll('.faq__q').forEach(b => { b.classList.remove('on'); b.setAttribute('aria-expanded', 'false'); });
+    // 선택 열기
+    if (!isOpen) {
+      ans.classList.add('on');
+      btn.classList.add('on');
+      btn.setAttribute('aria-expanded', 'true');
+    }
+  });
+});
+
+// ─ 4. 카카오 모달 ─
+function openKK() {
+  document.getElementById('kkBackdrop').classList.add('open');
+  document.body.style.overflow = 'hidden';
+  // 모바일에서 카카오톡 앱 열기 시도 (딥링크)
+  // → 앱이 설치된 경우 전환, 없으면 모달 그대로 유지
+  if (/Mobi|Android|iPhone|iPad/i.test(navigator.userAgent)) {
+    window.location.href = 'kakaotalk://launch';
+  }
+}
+function closeKK() {
+  document.getElementById('kkBackdrop').classList.remove('open');
+  document.body.style.overflow = '';
+  const btn = document.getElementById('kkCopyBtn');
+  btn.textContent = '📋 ID 복사하기';
+  btn.classList.remove('ok');
+}
+document.getElementById('kkBackdrop').addEventListener('click', function(e) {
+  if (e.target === this) closeKK();
+});
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeKK(); });
+
+function copyKK() {
+  const id  = 'qjdduf3586';
+  const btn = document.getElementById('kkCopyBtn');
+  const done = () => {
+    btn.textContent = '✅ 복사 완료!';
+    btn.classList.add('ok');
+    setTimeout(() => { btn.textContent = '📋 ID 복사하기'; btn.classList.remove('ok'); }, 2600);
+  };
+  if (navigator.clipboard && window.isSecureContext) {
+    navigator.clipboard.writeText(id).then(done).catch(() => fbCopy(id, done));
+  } else { fbCopy(id, done); }
+}
+function fbCopy(text, cb) {
+  const el = document.createElement('textarea');
+  el.value = text; el.style.cssText = 'position:fixed;opacity:0;top:0;left:0';
+  document.body.appendChild(el); el.focus(); el.select();
+  try { document.execCommand('copy'); cb(); } catch(_) {}
+  document.body.removeChild(el);
+}
+
+// ─ 5. IntersectionObserver 페이드인 ─
+const io = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('show'); io.unobserve(e.target); } });
+}, { threshold: 0.1, rootMargin: '0px 0px -32px 0px' });
+document.querySelectorAll('.fi').forEach(el => io.observe(el));
+
+// ─ 6. 앵커 스무스 스크롤 ─
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const id = a.getAttribute('href').slice(1);
+    if (!id) return;
+    const target = document.getElementById(id);
+    if (target) {
+      e.preventDefault();
+      window.scrollTo({ top: target.getBoundingClientRect().top + window.pageYOffset - 68, behavior: 'smooth' });
+    }
+  });
+});
+
+// ─ 7. 하단 CTA: 최종 문의 섹션 보이면 sticky 숨기기 ─
+const stickyEl  = document.getElementById('stickyCta');
+const contactEl = document.getElementById('contact');
+if (stickyEl && contactEl) {
+  new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      stickyEl.style.opacity       = e.isIntersecting ? '0' : '1';
+      stickyEl.style.pointerEvents = e.isIntersecting ? 'none' : '';
+    });
+  }, { threshold: 0.1 }).observe(contactEl);
+}
+</script>
+</body>
+</html>
