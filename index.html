@@ -17,8 +17,10 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://diddl6100.github.io/og-image-latest.png">
 <meta name="theme-color"        content="#2b1815">
-<link rel="icon" href="favicon-latest.png">
-<link rel="icon" href="favicon-latest.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-latest-32.png">
+<link rel="icon" type="image/png" href="favicon-latest.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-latest-32.png">
+<link rel="icon" type="image/png" href="favicon-latest.png">
 <link rel="apple-touch-icon" href="apple-touch-icon-latest.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -148,122 +150,77 @@ button{cursor:pointer;border:none;background:none;font-family:inherit;word-break
    2. HERO
 ═══════════════════════════════════════ */
 .hero{
-  min-height:100svh;background:
-    radial-gradient(ellipse 58% 64% at 78% 20%,rgba(140,108,58,.13) 0%,transparent 62%),
-    radial-gradient(ellipse 36% 42% at 14% 84%,rgba(85,58,24,.09) 0%,transparent 58%),
-    linear-gradient(180deg,#0f0c09 0%,#13100c 42%,#0d0b08 100%);
+  min-height:100svh;background:var(--bg-dark);
   display:flex;align-items:center;position:relative;
   overflow:hidden;padding-top:64px;
 }
 .hero__grad{
   position:absolute;inset:0;pointer-events:none;
   background:
-    linear-gradient(90deg,rgba(255,255,255,.02) 1px,transparent 1px) 0 0/84px 84px,
-    linear-gradient(0deg,rgba(255,255,255,.02) 1px,transparent 1px) 0 0/84px 84px,
-    linear-gradient(180deg,transparent 58%,rgba(8,6,4,.78) 100%);
-  opacity:.22;
+    radial-gradient(ellipse 55% 60% at 72% 35%,rgba(140,108,58,.11) 0%,transparent 65%),
+    radial-gradient(ellipse 40% 50% at 18% 72%,rgba(80,58,24,.07) 0%,transparent 62%),
+    linear-gradient(180deg,transparent 55%,rgba(12,10,8,1) 100%);
 }
 .hero__noise{
-  position:absolute;inset:0;pointer-events:none;opacity:.02;
+  position:absolute;inset:0;pointer-events:none;opacity:.022;
   background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-  background-size:240px;
+  background-size:220px;
 }
 .hero__vline{
   position:absolute;left:50%;top:0;bottom:0;width:1px;
-  background:linear-gradient(to bottom,transparent,rgba(182,148,106,.12) 18%,rgba(182,148,106,.12) 82%,transparent);
-  pointer-events:none;opacity:.6;
+  background:linear-gradient(to bottom,transparent,rgba(182,148,106,.07) 20%,rgba(182,148,106,.07) 80%,transparent);
+  pointer-events:none;
 }
 .hero__inner{
-  position:relative;z-index:2;width:min(1120px,92%);margin:0 auto;padding:88px 0 112px;
+  position:relative;z-index:2;
+  width:min(700px,92%);margin:0 auto;
+  text-align:center;padding:88px 0 108px;
 }
-.hero__layout{
-  display:grid;grid-template-columns:minmax(0,1.1fr) minmax(320px,.78fr);
-  gap:46px;align-items:end;
-}
-.hero__content{max-width:650px}
 .hero__chip{
   display:inline-flex;align-items:center;gap:12px;
   font-size:10px;letter-spacing:.24em;text-transform:uppercase;
-  color:var(--gold);font-weight:400;margin-bottom:26px;
+  color:var(--gold);font-weight:400;margin-bottom:30px;
 }
 .hero__chip::before,.hero__chip::after{
   content:'';width:22px;height:1px;background:var(--gold);opacity:.5;flex-shrink:0;
 }
+/* H1 — 페이지 핵심 메시지, 1개 */
 .hero__h1{
   font-family:var(--serif);
-  font-size:clamp(34px,5.7vw,66px);
-  font-weight:300;line-height:1.20;
-  color:#f4ead7;margin-bottom:18px;
-  letter-spacing:-.02em;word-break:keep-all;
+  font-size:clamp(28px,5vw,54px);
+  font-weight:300;line-height:1.32;
+  color:#f2e8d4;margin-bottom:20px;
+  letter-spacing:-.01em;word-break:keep-all;
 }
 .hero__h1 em{
   font-style:italic;font-family:var(--disp);
   color:var(--gold-lt);font-weight:400;
 }
 .hero__sub{
-  font-size:clamp(14px,1.85vw,17px);
-  color:rgba(242,232,212,.58);
-  font-weight:300;line-height:1.95;
-  margin-bottom:34px;max-width:520px;word-break:keep-all;
+  font-size:clamp(14px,1.8vw,16px);
+  color:rgba(242,232,212,.50);
+  font-weight:300;line-height:1.88;
+  margin-bottom:42px;word-break:keep-all;
 }
-.hero__btns{display:flex;gap:12px;justify-content:flex-start;flex-wrap:wrap}
+.hero__btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
 .btn-g{
   display:inline-flex;align-items:center;gap:8px;
   background:var(--gold);color:#0c0a08;
   font-size:14px;font-weight:500;letter-spacing:.06em;
   padding:13px 28px;border-radius:var(--r);
   transition:all var(--dur) var(--ease);font-family:var(--sans);white-space:nowrap;
-  box-shadow:0 12px 28px rgba(0,0,0,.16);
 }
 .btn-g:hover{background:var(--gold-lt);transform:translateY(-1px)}
 .btn-o{
   display:inline-flex;align-items:center;gap:8px;
-  background:rgba(255,255,255,.03);color:rgba(242,232,212,.82);
+  background:transparent;color:rgba(242,232,212,.76);
   font-size:14px;font-weight:400;letter-spacing:.06em;
-  padding:12px 28px;border:1px solid rgba(242,232,212,.16);
+  padding:12px 28px;border:1px solid rgba(242,232,212,.18);
   border-radius:var(--r);transition:all var(--dur) var(--ease);
   font-family:var(--sans);white-space:nowrap;
 }
-.btn-o:hover{border-color:rgba(182,148,106,.5);color:var(--gold-lt);background:rgba(182,148,106,.05)}
-.hero__meta{
-  display:flex;gap:22px;flex-wrap:wrap;margin-top:24px;
-}
-.hero__meta-item{
-  font-size:12px;color:rgba(242,232,212,.42);display:flex;align-items:center;gap:6px;letter-spacing:.04em;
-}
-.hero__meta-item::before{
-  content:'';width:4px;height:4px;border-radius:50%;background:var(--gold);opacity:.65;
-}
-.hero__panel{
-  position:relative;padding:30px 28px 26px;border:1px solid rgba(182,148,106,.16);
-  background:linear-gradient(180deg,rgba(255,255,255,.05) 0%,rgba(255,255,255,.02) 100%);
-  box-shadow:0 18px 60px rgba(0,0,0,.24);backdrop-filter:blur(14px);
-}
-.hero__panel::before{
-  content:'';position:absolute;top:0;left:0;right:0;height:1px;
-  background:linear-gradient(to right,transparent,rgba(182,148,106,.46),transparent);
-}
-.hero__panel-kicker{
-  font-size:10px;letter-spacing:.22em;text-transform:uppercase;
-  color:var(--gold);margin-bottom:18px;
-}
-.hero__mini{display:grid;gap:16px}
-.hero__mini-card{
-  padding:16px 0;border-top:1px solid rgba(182,148,106,.12);
-}
-.hero__mini-card:first-child{border-top:none;padding-top:0}
-.hero__mini-title{
-  font-family:var(--serif);font-size:16px;font-weight:500;color:#f0e6d2;margin-bottom:6px;
-}
-.hero__mini-desc{
-  font-size:13px;line-height:1.8;color:rgba(240,230,210,.48);font-weight:300;
-}
-.hero__panel-foot{
-  margin-top:18px;padding-top:18px;border-top:1px solid rgba(182,148,106,.12);
-  display:flex;justify-content:space-between;gap:16px;align-items:flex-end;
-}
-.hero__panel-name{font-size:11px;letter-spacing:.18em;color:var(--gold);text-transform:uppercase}
-.hero__panel-copy{font-family:var(--serif);font-size:14px;color:#f0e6d2;line-height:1.6}
+.btn-o:hover{border-color:rgba(182,148,106,.5);color:var(--gold-lt)}
+/* 스크롤 힌트 */
 .hero__sc{
   position:absolute;bottom:26px;left:50%;transform:translateX(-50%);
   display:flex;flex-direction:column;align-items:center;gap:6px;
@@ -276,31 +233,31 @@ button{cursor:pointer;border:none;background:none;font-family:inherit;word-break
 /* ═══════════════════════════════════════
    3. TRUST STRIP
 ═══════════════════════════════════════ */
-.trust{background:linear-gradient(180deg,#15110d 0%,#17130f 100%);padding:0}
+.trust{background:var(--ink-2);padding:0}
 .trust__grid{
   width:min(1080px,92%);margin:0 auto;
   display:grid;grid-template-columns:repeat(4,1fr);
-  gap:1px;background:rgba(182,148,106,.08);
-  border-left:1px solid rgba(182,148,106,.10);
-  border-right:1px solid rgba(182,148,106,.10);
+  gap:1px;background:rgba(182,148,106,.09);
+  border:1px solid rgba(182,148,106,.09);
 }
 .trust__card{
-  background:rgba(18,14,10,.96);padding:42px 28px 38px;position:relative;
-  transition:background var(--dur) var(--ease),transform var(--dur) var(--ease);
+  background:var(--ink-2);padding:38px 26px 34px;position:relative;
+  transition:background var(--dur) var(--ease);
 }
 .trust__card::after{
   content:'';position:absolute;top:0;left:0;right:0;height:2px;
-  background:linear-gradient(to right,transparent,var(--gold),transparent);
-  transform:scaleX(.28);opacity:.4;transition:all var(--dur) var(--ease);
+  background:var(--gold);transform:scaleX(0);transform-origin:left;
+  transition:transform var(--dur) var(--ease);
 }
-.trust__card:hover{background:#1b1611;transform:translateY(-2px)}
-.trust__card:hover::after{transform:scaleX(1);opacity:.88}
+.trust__card:hover{background:#1c1812}
+.trust__card:hover::after{transform:scaleX(1)}
 .trust__ico{font-size:20px;margin-bottom:14px;display:block}
 .trust__t{
   font-family:var(--serif);font-size:15px;font-weight:500;
   color:#f0e6d2;margin-bottom:8px;letter-spacing:.02em;word-break:keep-all;
 }
-.trust__d{font-size:13px;color:rgba(240,230,210,.45);line-height:1.76;font-weight:300;word-break:keep-all}
+.trust__d{font-size:13px;color:rgba(240,230,210,.44);line-height:1.72;font-weight:300;word-break:keep-all}
+/* 대표 정보 카드 — 정우열 노출 */
 .trust__rep{
   font-size:11.5px;color:var(--gold);
   margin-top:12px;letter-spacing:.08em;font-weight:400;
@@ -352,36 +309,38 @@ button{cursor:pointer;border:none;background:none;font-family:inherit;word-break
    5. WHY
 ═══════════════════════════════════════ */
 .why__grid{
-  display:grid;grid-template-columns:minmax(320px,.9fr) minmax(0,1.1fr);
-  gap:84px;align-items:center;
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:80px;align-items:center;
 }
 .why__vis{position:relative}
 .why__img{
   aspect-ratio:4/5;border-radius:var(--r);overflow:hidden;
   background:#1c1610;position:relative;
-  box-shadow:0 20px 60px rgba(0,0,0,.16);
-}
-.why__img::after{
-  content:'';position:absolute;inset:0;
-  background:linear-gradient(180deg,transparent 52%,rgba(12,10,8,.20) 100%);
-  pointer-events:none;
 }
 .why__img img{
   width:100%;height:100%;display:block;object-fit:cover;
 }
-.why__badge{
-  position:absolute;bottom:-18px;right:-18px;
-  background:#111;border:1px solid rgba(182,148,106,.22);color:#f0e6d2;
-  padding:15px 18px;box-shadow:0 8px 30px rgba(0,0,0,.22);word-break:keep-all;
+
+.why__img-in{
+  position:absolute;inset:0;
+  display:flex;align-items:center;justify-content:center;
+  background:linear-gradient(145deg,#1e1610 0%,#2c2014 55%,#181208 100%);
 }
-.why__badge-n{font-family:var(--disp);font-size:26px;font-weight:600;line-height:1;color:var(--gold-lt);letter-spacing:-.02em;display:block;margin-bottom:2px}
-.why__badge-l{font-size:11.5px;font-weight:400;letter-spacing:.08em;color:rgba(240,230,210,.72)}
-.why__pts{display:flex;flex-direction:column;gap:22px;margin-top:34px}
-.why__pt{display:flex;gap:16px;padding:0 0 18px;border-bottom:1px solid rgba(0,0,0,.06)}
-.why__pt:last-child{padding-bottom:0;border-bottom:none}
-.why__bar{width:2px;flex-shrink:0;background:linear-gradient(to bottom,var(--gold),rgba(182,148,106,.08));border-radius:2px;margin:3px 0}
-.why__pt-t{font-family:var(--serif);font-size:16px;font-weight:500;color:var(--ink);margin-bottom:6px;word-break:keep-all}
-.why__pt-d{font-size:13.5px;color:var(--muted);line-height:1.78;font-weight:300;word-break:keep-all}
+/* 노트·기록 분위기 SVG */
+.why__ph{opacity:.16}
+.why__badge{
+  position:absolute;bottom:-16px;right:-16px;
+  background:var(--gold);color:#0c0a08;
+  padding:14px 18px;box-shadow:0 6px 28px rgba(0,0,0,.22);word-break:keep-all;
+}
+.why__badge-n{font-family:var(--disp);font-size:26px;font-weight:600;line-height:1;letter-spacing:-.02em;display:block;margin-bottom:2px}
+.why__badge-l{font-size:11.5px;font-weight:500;letter-spacing:.04em}
+/* 포인트 */
+.why__pts{display:flex;flex-direction:column;gap:24px;margin-top:32px}
+.why__pt{display:flex;gap:14px}
+.why__bar{width:2px;flex-shrink:0;background:var(--bdgd);border-radius:2px;margin:5px 0}
+.why__pt-t{font-family:var(--serif);font-size:15px;font-weight:500;color:var(--ink);margin-bottom:5px;word-break:keep-all}
+.why__pt-d{font-size:13.5px;color:var(--muted);line-height:1.75;font-weight:300;word-break:keep-all}
 
 /* ═══════════════════════════════════════
    6. SERVICES
@@ -471,39 +430,37 @@ button{cursor:pointer;border:none;background:none;font-family:inherit;word-break
 /* ═══════════════════════════════════════
    10. FINAL CTA
 ═══════════════════════════════════════ */
-.cta-f{background:linear-gradient(180deg,#120e0a 0%,#100d09 100%);padding:108px 0;position:relative;overflow:hidden}
+.cta-f{background:var(--bg-dark);padding:100px 0;position:relative;overflow:hidden}
 .cta-f__bg{
   position:absolute;inset:0;pointer-events:none;
-  background:
-    radial-gradient(ellipse 50% 65% at 50% 38%,rgba(138,108,52,.10) 0%,transparent 65%),
-    linear-gradient(90deg,rgba(255,255,255,.02) 1px,transparent 1px) 0 0/84px 84px;
+  background:radial-gradient(ellipse 50% 65% at 50% 50%,rgba(138,108,52,.08) 0%,transparent 65%);
 }
-.cta-f__in{position:relative;z-index:1;width:min(900px,92%);margin:0 auto;text-align:center}
+.cta-f__in{position:relative;z-index:1;width:min(800px,92%);margin:0 auto;text-align:center}
 .cta-f__h2{
-  font-family:var(--serif);font-size:clamp(24px,3vw,38px);
-  font-weight:300;color:#f2e8d4;line-height:1.42;
+  font-family:var(--serif);font-size:clamp(22px,3vw,36px);
+  font-weight:300;color:#f2e8d4;line-height:1.44;
   margin-bottom:12px;word-break:keep-all;
 }
-.cta-f__sub{font-size:14.5px;color:rgba(242,232,212,.50);font-weight:300;margin-bottom:50px;line-height:1.82;word-break:keep-all}
+.cta-f__sub{font-size:14.5px;color:rgba(242,232,212,.44);font-weight:300;margin-bottom:48px;line-height:1.82;word-break:keep-all}
+/* 채널 카드 2×2 그리드 */
 .cta-chs{
   display:grid;grid-template-columns:repeat(2,1fr);
-  gap:13px;margin-bottom:34px;max-width:620px;margin-left:auto;margin-right:auto;
+  gap:11px;margin-bottom:32px;max-width:540px;margin-left:auto;margin-right:auto;
 }
 .cta-ch{
   display:flex;align-items:center;gap:13px;
   background:rgba(255,255,255,.04);
   border:1px solid rgba(182,148,106,.16);
-  border-radius:var(--r);padding:18px 20px;
+  border-radius:var(--r);padding:17px 20px;
   transition:all var(--dur) var(--ease);cursor:pointer;text-align:left;width:100%;
-  box-shadow:0 10px 24px rgba(0,0,0,.10);
 }
 .cta-ch:hover{background:rgba(182,148,106,.08);border-color:rgba(182,148,106,.36);transform:translateY(-2px)}
 .cta-ch__ico{font-size:19px;flex-shrink:0}
-.cta-ch__lb{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);font-weight:400;margin-bottom:3px}
+.cta-ch__lb{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:400;margin-bottom:3px}
 .cta-ch__vl{font-size:14.5px;color:#f0e6d2;font-weight:400;letter-spacing:.02em;word-break:break-all}
 .cta-chips{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
-.cta-chip{font-size:12px;color:rgba(242,232,212,.30);display:flex;align-items:center;gap:5px}
-.cta-chip::before{content:'·';color:var(--gold);opacity:.5}
+.cta-chip{font-size:12px;color:rgba(242,232,212,.28);display:flex;align-items:center;gap:5px}
+.cta-chip::before{content:'·';color:var(--gold);opacity:.4}
 
 /* ═══════════════════════════════════════
    11. FOOTER
@@ -619,10 +576,10 @@ button{cursor:pointer;border:none;background:none;font-family:inherit;word-break
   .nav__tel-pc{display:none}
   .nav__ham{display:flex}
   .trust__grid{grid-template-columns:repeat(2,1fr)}
-  .hero__layout{grid-template-columns:1fr;gap:26px}.hero__content{max-width:none}.hero__panel{max-width:560px}.why__grid{grid-template-columns:1fr;gap:44px}
+  .why__grid{grid-template-columns:1fr;gap:44px}
   .why__vis{max-width:380px;margin:0 auto}
   .why__badge{bottom:-14px;right:-10px}
-  .svc__grid{grid-template-columns:1fr}
+  .svc__grid{grid-template-columns:repeat(2,1fr)}
   .proc__grid{grid-template-columns:repeat(2,1fr);gap:38px}
   .proc__grid::before{display:none}
   .cta-chs{grid-template-columns:1fr;max-width:300px}
@@ -707,55 +664,29 @@ button{cursor:pointer;border:none;background:none;font-family:inherit;word-break
   <div class="hero__vline" aria-hidden="true"></div>
 
   <div class="hero__inner">
-    <div class="hero__layout">
-      <div class="hero__content">
-        <div class="hero__chip">예담탐정 · 대표 정우열</div>
+    <div class="hero__chip">예담탐정 · 대표 정우열</div>
 
-        <!-- H1: 페이지 전체에서 1개만 사용 -->
-        <h1 class="hero__h1">
-          문제보다 <em>마음을 먼저</em><br>살핍니다
-        </h1>
+    <!-- H1: 페이지 전체에서 1개만 사용 -->
+    <h1 class="hero__h1">
+      문제보다<br><em>마음을 먼저</em> 살핍니다
+    </h1>
 
-        <p class="hero__sub">
-          사람찾기, 사실확인, 외도상담, 탐정심리상담까지.<br>
-          빠른 결론보다 먼저, 현재 상황을 차분하게 정리하는 상담을 지향합니다.
-        </p>
+    <p class="hero__sub">
+      탐정 상담부터 심리상담까지.<br>
+      사실 앞에 서기 전, 마음부터 정리합니다.
+    </p>
 
-        <div class="hero__btns">
-          <a href="tel:01032738199" class="btn-g">📞 전화 상담하기</a>
-          <button class="btn-o" onclick="openKK()" aria-label="카카오톡 문의">
-            💬 카카오톡 문의
-          </button>
-        </div>
-
-        <div class="hero__meta">
-          <span class="hero__meta-item">대표 직접 상담</span>
-          <span class="hero__meta-item">비밀 보장</span>
-          <span class="hero__meta-item">합법적 범위 내 진행</span>
-        </div>
-      </div>
-
-      <aside class="hero__panel fi fd1" aria-label="예담탐정 핵심 기준">
-        <div class="hero__panel-kicker">premium counseling approach</div>
-        <div class="hero__mini">
-          <div class="hero__mini-card">
-            <div class="hero__mini-title">문제를 자극적으로 다루지 않습니다</div>
-            <div class="hero__mini-desc">의뢰인의 상황을 과장하지 않고, 현재의 사실과 감정을 함께 정리하는 상담을 우선합니다.</div>
-          </div>
-          <div class="hero__mini-card">
-            <div class="hero__mini-title">탐정 실무와 심리상담의 결을 함께 봅니다</div>
-            <div class="hero__mini-desc">확인이 필요한 문제와 먼저 정리가 필요한 마음을 분리해서, 이후의 선택이 덜 흔들리도록 돕습니다.</div>
-          </div>
-          <div class="hero__mini-card">
-            <div class="hero__mini-title">빠른 답보다 기준을 세웁니다</div>
-            <div class="hero__mini-desc">사람찾기, 관계 문제, 사실확인 앞에서 지금 무엇을 먼저 봐야 하는지 차분한 기준부터 함께 세웁니다.</div>
-          </div>
-        </div>
-        <div class="hero__panel-foot">
-          <div class="hero__panel-name">Yedam Detective</div>
-          <div class="hero__panel-copy">탐정 상담과 심리상담을 함께 생각하는<br>브랜드형 랜딩페이지</div>
-        </div>
-      </aside>
+    <div class="hero__btns">
+      <!-- tel: → 즉시 전화 연결 -->
+      <a href="tel:01032738199" class="btn-g">📞 전화 상담하기</a>
+      <!--
+        카카오톡 버튼:
+        개인 카카오톡 ID 친구추가를 웹에서 직접 여는 공식 URL 없음.
+        클릭 시 모달 → ID 안내 + 원터치 복사 흐름.
+      -->
+      <button class="btn-o" onclick="openKK()" aria-label="카카오톡 문의">
+        💬 카카오톡 문의
+      </button>
     </div>
   </div>
 
@@ -852,7 +783,7 @@ button{cursor:pointer;border:none;background:none;font-family:inherit;word-break
       <!-- 좌: 비주얼 -->
       <div class="why__vis fi">
         <div class="why__img">
-          <img src="yedam-latest-assets/a_photograph_showcases_a_warmly_lit_consultation_s.png" alt="따뜻한 조명 아래 상담 테이블과 노트가 놓인 예담탐정 상담 공간 이미지">
+          <img src="a_photograph_showcases_a_warmly_lit_consultation_s.png" alt="따뜻한 조명 아래 상담 테이블과 노트가 놓인 예담탐정 상담 공간 이미지">
         </div>
         <div class="why__badge">
           <span class="why__badge-n">10+</span>
@@ -867,9 +798,9 @@ button{cursor:pointer;border:none;background:none;font-family:inherit;word-break
           일반 탐정·흥신소와<br>다른 방식으로 접근합니다
         </h2>
         <p class="sec__desc fi">
-          예담탐정은 단순히 사실만 확인하는 곳이 아니라,
-          그 사실을 어떤 기준과 마음으로 마주해야 할지까지
-          함께 생각하는 상담을 지향합니다.
+          예담탐정은 단순히 사실을 수집하는 것을 넘어,
+          의뢰인이 그 결과를 어떻게 받아들이고
+          이후 어떤 선택을 할지까지 함께 생각합니다.
         </p>
         <div class="why__pts">
           <div class="why__pt fi fd1">
@@ -882,7 +813,7 @@ button{cursor:pointer;border:none;background:none;font-family:inherit;word-break
           <div class="why__pt fi fd2">
             <div class="why__bar"></div>
             <div>
-              <h3 class="why__pt-t">실무와 심리상담의 결을 함께 봅니다</h3>
+              <h3 class="why__pt-t">조사와 심리상담을 함께 합니다</h3>
               <p class="why__pt-d">사실을 아는 것과 그것을 수용하는 것은 별개의 과정입니다. 조사 전후 심리적 공백까지 함께 고려합니다.</p>
             </div>
           </div>
@@ -906,7 +837,7 @@ button{cursor:pointer;border:none;background:none;font-family:inherit;word-break
   <div class="W">
     <p class="sec__lb">상담 분야</p>
     <h2 class="sec__h2 fi">
-      지금 필요한 방향을<br>조심스럽게 함께 정리합니다
+      어떤 상황에서 오셔도<br>조심스럽게 함께합니다
     </h2>
 
     <div class="svc__grid">
@@ -1099,10 +1030,10 @@ button{cursor:pointer;border:none;background:none;font-family:inherit;word-break
   <div class="cta-f__in">
     <p class="sec__lb fi">문의하기</p>
     <h2 class="cta-f__h2 fi">
-      혼자 판단하기 어려운 순간,<br>먼저 조심스럽게 듣겠습니다.
+      조심스럽게 연락해 주세요.<br>먼저 듣겠습니다.
     </h2>
     <p class="cta-f__sub fi">
-      대표가 직접 상담하며, 현재 상황과 마음의 상태를 함께 정리합니다.
+      모든 상담 내용은 철저히 비밀이 보장됩니다.
     </p>
 
     <div class="cta-chs fi">
