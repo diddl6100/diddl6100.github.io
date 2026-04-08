@@ -203,6 +203,8 @@ button{cursor:pointer;border:none;background:none;font-family:inherit;word-break
   margin-bottom:42px;word-break:keep-all;
 }
 .hero__btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.hero__hint{margin-top:10px;text-align:center;font-size:13px;line-height:1.7;color:rgba(255,244,222,.88)}
+.hero__hint strong{color:#fff4de;font-weight:700}
 .btn-g{
   display:inline-flex;align-items:center;gap:8px;
   background:var(--gold);color:#0c0a08;
@@ -370,29 +372,32 @@ button{cursor:pointer;border:none;background:none;font-family:inherit;word-break
 .svc-tag{font-size:11px;color:var(--gold-dk);background:rgba(182,148,106,.09);padding:3px 8px;border-radius:2px;letter-spacing:.04em}
 
 /* ═══════════════════════════════════════
+   6-1. HOT CASES
+═══════════════════════════════════════ */
+.hot__grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:26px;align-items:stretch}
+.hot__card{padding:22px 20px;border:1px solid rgba(182,148,106,.18);border-radius:22px;background:#fffaf4;box-shadow:0 14px 34px rgba(0,0,0,.06)}
+.hot__card h3{font-family:var(--serif);font-size:18px;line-height:1.45;color:#1f1a16;margin:0 0 12px;font-weight:600}
+.hot__card p{font-size:14px;line-height:1.95;color:#4c4036;margin:0;word-break:keep-all}
+@media (max-width:980px){.hot__grid{grid-template-columns:1fr;gap:14px}.hot__card{padding:18px 16px}.hot__card h3{font-size:17px}.hot__card p{font-size:13.5px;line-height:1.8}}
+
+/* ═══════════════════════════════════════
    7. PROCESS
 ═══════════════════════════════════════ */
 .proc__grid{
-  display:grid;grid-template-columns:repeat(4,1fr);
-  gap:0;margin-top:50px;position:relative;
+  display:grid;grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:26px;max-width:980px;margin:44px auto 0;position:relative;align-items:start;justify-items:stretch;
 }
-.proc__grid::before{
-  content:'';position:absolute;
-  top:26px;left:calc(12.5% + 18px);right:calc(12.5% + 18px);
-  height:1px;
-  background:linear-gradient(to right,transparent,rgba(182,148,106,.18) 15%,rgba(182,148,106,.18) 85%,transparent);
-  z-index:0;
-}
-.proc-s{position:relative;z-index:1;padding:0 14px;text-align:center}
+.proc__grid::before{display:none}
+.proc-s{position:relative;z-index:1;padding:22px 18px 18px;text-align:center;border:1px solid rgba(182,148,106,.16);border-radius:24px;background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.02));min-height:100%}
 .proc-n{
   width:52px;height:52px;border:1px solid rgba(182,148,106,.26);border-radius:50%;
   display:flex;align-items:center;justify-content:center;
-  margin:0 auto 20px;font-family:var(--disp);font-size:16px;color:var(--gold);
+  margin:0 auto 18px;font-family:var(--disp);font-size:16px;color:var(--gold);
   background:var(--bg-dark);transition:all var(--dur) var(--ease);
 }
 .proc-s:hover .proc-n{background:rgba(182,148,106,.09);border-color:var(--gold)}
-.proc-t{font-family:var(--serif);font-size:14.5px;font-weight:500;color:#f0e6d2;margin-bottom:8px;word-break:keep-all}
-.proc-d{font-size:13px;color:rgba(240,230,210,.40);line-height:1.72;font-weight:300;word-break:keep-all}
+.proc-t{font-family:var(--serif);font-size:16px;font-weight:500;color:#f0e6d2;margin-bottom:10px;word-break:keep-all;line-height:1.45}
+.proc-d{font-size:13.5px;color:rgba(240,230,210,.72);line-height:1.88;font-weight:300;word-break:keep-all;margin:0}
 
 /* ═══════════════════════════════════════
    8. BRAND QUOTE
@@ -513,7 +518,7 @@ button{cursor:pointer;border:none;background:none;font-family:inherit;word-break
 .cta-ch__lb{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:400;margin-bottom:3px}
 .cta-ch__vl{font-size:14.5px;color:#f0e6d2;font-weight:400;letter-spacing:.02em;line-height:1.55;word-break:keep-all;overflow-wrap:anywhere}
 .cta-ch__meta{display:block;margin-top:3px;font-size:15px;font-weight:500;letter-spacing:0;word-break:break-all}
-.cta-chips{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.cta-chips{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:18px;padding-top:14px;border-top:1px solid rgba(182,148,106,.12)}
 .cta-chip{font-size:12px;color:rgba(242,232,212,.28);display:flex;align-items:center;gap:5px}
 .cta-chip::before{content:'·';color:var(--gold);opacity:.4}
 
@@ -530,6 +535,33 @@ button{cursor:pointer;border:none;background:none;font-family:inherit;word-break
 .cta-sample__txt{font-size:13px;line-height:1.7;color:#f0e6d2;flex:1;word-break:keep-all}
 .cta-sample__copy{flex-shrink:0;padding:8px 12px;border-radius:999px;background:rgba(182,148,106,.16);color:#f0e6d2;font-size:12px;border:1px solid rgba(182,148,106,.18);cursor:pointer}
 .cta-sample__copy:hover{background:rgba(182,148,106,.24)}
+
+.cta-action-note{max-width:620px;margin:0 auto 14px;padding:12px 16px;border-radius:16px;border:1px solid rgba(182,148,106,.18);background:rgba(255,255,255,.05);font-size:13px;line-height:1.8;color:#f2e8d4;text-align:center;word-break:keep-all}
+.cta-bottom-note{max-width:620px;margin:16px auto 0;padding-top:14px;border-top:1px solid rgba(182,148,106,.14);font-size:13px;line-height:1.8;color:rgba(255,241,219,.92);text-align:center;word-break:keep-all}
+.guard__card h3{font-size:18px;line-height:1.4;color:#f5ead7;margin:0 0 10px;font-family:var(--serif)}
+.guard__card p{font-size:14px;line-height:1.9;color:rgba(242,232,212,.82);word-break:keep-all}
+@media (max-width:780px){.cta-action-note{font-size:12.5px;padding:11px 14px}.cta-bottom-note{font-size:12.5px;margin-top:14px;padding-top:12px}}
+
+.cta-f__sub{margin-bottom:28px}
+.cta-note{margin:0 auto 24px;padding:16px 18px}
+.cta-note__title{margin-bottom:8px}
+.cta-note__text{line-height:1.9}
+.cta-note__badges{margin-top:12px}
+.cta-samples{margin:0 auto 30px}
+.cta-sample{padding:14px 16px}
+.cta-sample__txt{line-height:1.82}
+.cta-minihead{margin:0 0 12px;text-align:center;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold)}
+.cta-methodbox{max-width:820px;margin:0 auto 18px;padding:20px 18px;border:1px solid rgba(182,148,106,.14);border-radius:22px;background:rgba(255,255,255,.035)}
+.cta-methodbox--secondary{margin-bottom:26px}
+.cta-primary,.cta-secondary{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;max-width:760px;margin:0 auto}
+.cta-secondary{margin-bottom:0}
+.cta-ch{padding:18px 20px;min-height:104px}
+.cta-ch__lb{margin-bottom:6px}
+.cta-ch__vl{line-height:1.75}
+.cta-ch__meta{margin-top:6px;line-height:1.6}
+@media (max-width:980px){.proc__grid{grid-template-columns:1fr;gap:14px;max-width:620px}.proc-s{text-align:left;padding:18px 16px}.proc-n{margin:0 0 14px}.proc-t{font-size:15px}.proc-d{font-size:13px;line-height:1.8}}
+@media (max-width:780px){.cta-primary,.cta-secondary{grid-template-columns:1fr;gap:12px}.cta-methodbox{padding:16px 14px;border-radius:18px;margin-bottom:14px}.cta-methodbox--secondary{margin-bottom:20px}.cta-ch{min-height:auto;padding:16px 16px}.cta-f__sub{line-height:1.9;margin-bottom:22px}.cta-note,.cta-samples{max-width:none}.cta-sample{flex-direction:column;align-items:stretch}.cta-sample__copy{width:100%}.cta-minihead{margin:0 0 10px}.cta-f__panel{padding:22px 16px;border-radius:22px}}
+
 
 /* ═══════════════════════════════════════
    11. FOOTER
@@ -669,12 +701,32 @@ button{cursor:pointer;border:none;background:none;font-family:inherit;word-break
   .proc__grid{grid-template-columns:1fr;gap:28px}
   .hero__btns{flex-direction:column;align-items:center}
   .btn-g,.btn-o{width:100%;max-width:260px;justify-content:center}
+  .hero__hint{font-size:12px;max-width:290px;margin:10px auto 0}
   .cta-ch{padding:16px 16px;min-height:76px}
   .cta-ch__vl{font-size:13.5px;line-height:1.5;word-break:keep-all;overflow-wrap:anywhere}
   .footer__in{flex-direction:column;align-items:flex-start;gap:13px}
   .footer__lks{flex-wrap:wrap;gap:12px}
   .sec{padding:60px 0}
 }
+
+.cta-now{margin:16px auto 0;max-width:860px;padding:0;background:none;border:none;}
+.cta-now__title{font-weight:800;color:#fff4de;margin-bottom:10px;font-size:15px;}
+.cta-now__list{display:grid;grid-template-columns:1fr 1fr;gap:8px 18px;list-style:none;margin:0;padding:0;}
+.cta-now__item{position:relative;padding-left:14px;color:#fff4de;font-size:14px;line-height:1.7;}
+.cta-now__item::before{content:"•";position:absolute;left:0;top:0;color:var(--gold);font-weight:800;}
+@media (max-width:780px){.cta-now{margin-top:12px}.cta-now__list{grid-template-columns:1fr}.cta-now__item{font-size:13px;line-height:1.65}}
+.contact-guide{padding:44px 0 44px;background:linear-gradient(180deg,rgba(28,18,14,.98),rgba(24,16,12,.94));}
+.contact-guide__split{max-width:920px;margin:0 auto;padding:0 20px;}
+.contact-guide__badge{display:inline-flex;align-items:center;gap:8px;padding:9px 14px;border-radius:999px;background:rgba(182,148,106,.12);border:1px solid rgba(182,148,106,.22);color:#f6ead4;font-size:12px;letter-spacing:.08em;text-transform:uppercase;margin-bottom:14px;}
+.contact-guide__in{max-width:920px;margin:0 auto;padding:0 20px;}
+.contact-guide__card{max-width:860px;margin:0 auto;padding:22px 22px;border:1px solid rgba(182,148,106,.28);border-radius:24px;background:linear-gradient(180deg,rgba(255,255,255,.08),rgba(255,255,255,.04));box-shadow:0 18px 50px rgba(0,0,0,.18);}
+.contact-guide__eyebrow{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;}
+.contact-guide__title{font-size:clamp(22px,3.4vw,30px);line-height:1.3;color:#fff4de;font-weight:800;margin:0 0 10px;text-shadow:0 1px 0 rgba(0,0,0,.24);}
+.contact-guide__sub{font-size:14px;line-height:1.8;color:#fff1db;max-width:700px;}
+.contact-guide .cta-now{margin:14px auto 0;max-width:none;}
+.contact-guide .cta-now__title{color:#fff4de;text-shadow:0 1px 0 rgba(0,0,0,.2);}
+@media (max-width:780px){.contact-guide{padding:30px 0 30px}.contact-guide__card{padding:18px 16px;border-radius:18px}.contact-guide__title{font-size:22px}.contact-guide__sub{font-size:13px}.contact-guide__badge{font-size:11px;padding:8px 12px;margin-bottom:12px}}
+
 </style>
   <meta property="og:url" content="https://diddl6100.github.io/">
 </head>
@@ -755,9 +807,10 @@ button{cursor:pointer;border:none;background:none;font-family:inherit;word-break
     </p>
 
     <div class="hero__btns">
-      <a href="#prep" class="btn-g">체크리스트 먼저 보기</a>
-      <a href="#contact" class="btn-o" aria-label="문의 방법 안내 구역으로 이동">문의 방법 안내받기</a>
+      <a href="#prep" class="btn-g">상담 가능 여부 먼저 물어보기</a>
+      <a href="#contact" class="btn-o" aria-label="문의 방법 안내 구역으로 이동">익명으로 먼저 문의하기</a>
     </div>
+    <p class="hero__hint"><strong>짧게 시작하셔도 됩니다.</strong> 한두 문장으로 상황을 말씀해주시면 먼저 어떤 기준으로 봐야 할지부터 안내해드립니다.</p>
   </div>
 
   <div class="hero__sc" aria-hidden="true">scroll</div>
@@ -1055,23 +1108,44 @@ button{cursor:pointer;border:none;background:none;font-family:inherit;word-break
     <p class="sec__lb">상담 전 준비하면 좋은 정보</p>
     <h2 class="sec__h2 fi">처음 문의할 때<br>이 정도만 정리해도 충분합니다</h2>
     <div class="prep__grid">
-      <div class="prep__card fi">
-        <h3>먼저 적어보면 좋은 것</h3>
-        <ul class="prep__list">
-          <li>지금 가장 마음에 걸리는 장면 1가지</li>
-          <li>직접 확인한 사실과 아직 추정인 내용</li>
-          <li>마지막으로 확인된 시점이나 연락 시기</li>
-          <li>지금 상담에서 알고 싶은 것 1가지</li>
+      <div class="prep__card fi" style="display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;min-height:260px;padding:34px 28px;">
+        <h3 style="color:#111827;margin-bottom:14px;">먼저 적어보면 좋은 것</h3>
+        <ul class="prep__list" style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;list-style:none;padding-left:0;margin:0;">
+          <li style="color:#111827;">지금 가장 마음에 걸리는 장면 1가지</li>
+          <li style="color:#111827;">직접 확인한 사실과 아직 추정인 내용</li>
+          <li style="color:#111827;">마지막으로 확인된 시점이나 연락 시기</li>
+          <li style="color:#111827;">지금 상담에서 알고 싶은 것 1가지</li>
         </ul>
       </div>
-      <div class="prep__card fi fd1">
-        <h3>꼭 완벽할 필요는 없습니다</h3>
-        <p>정보가 많지 않아도 괜찮습니다. 예담탐정은 처음부터 결론을 단정하기보다,현재 상황을 어떤 기준으로 봐야 하는지부터 함께 정리하는 상담을 중요하게 생각합니다.</p>
+      <div class="prep__card fi fd1" style="display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;min-height:260px;padding:34px 28px;">
+        <h3 style="color:#111827;margin-bottom:14px;">꼭 완벽할 필요는 없습니다</h3>
+        <p style="color:#111827;max-width:34ch;margin:0 auto;">정보가 많지 않아도 괜찮습니다. 예담탐정은 처음부터 결론을 단정하기보다,현재 상황을 어떤 기준으로 봐야 하는지부터 함께 정리하는 상담을 중요하게 생각합니다.</p>
       </div>
     </div>
   </div>
 </section>
 
+<!-- ══════════════════════════ HOT CASES ══════════════════════════ -->
+<section class="sec" aria-label="자주 문의하는 상황">
+  <div class="W">
+    <p class="sec__lb">자주 문의하는 상황</p>
+    <h2 class="sec__h2 fi">이런 경우라면<br>지금 문의하셔도 괜찮습니다</h2>
+    <div class="hot__grid">
+      <div class="hot__card fi">
+        <h3>사람찾기 전</h3>
+        <p>연락이 끊긴 사람을 찾고 싶은데,지금 가진 정보로 무엇부터 말해야 할지 막막한 경우입니다.</p>
+      </div>
+      <div class="hot__card fi fd1">
+        <h3>사실확인 전</h3>
+        <p>사실과 추정이 섞여 혼자 판단이 어려워지고,지금 무엇을 먼저 확인해야 할지 헷갈리는 경우입니다.</p>
+      </div>
+      <div class="hot__card fi fd2">
+        <h3>관계 문제</h3>
+        <p>외도 의심이나 관계 문제로 같은 생각이 반복되고,혼자 생각할수록 기준이 더 흔들리는 경우입니다.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- ══════════════════════════ PROCESS ══════════════════════════ -->
 <section class="sec sec--dk" id="process" aria-label="예담탐정 진행 방식">
@@ -1112,8 +1186,8 @@ button{cursor:pointer;border:none;background:none;font-family:inherit;word-break
 <!-- ══════════════════════════ WE DON'T ══════════════════════════ -->
 <section class="sec" aria-label="예담탐정은 이렇게 진행하지 않습니다">
   <div class="W">
-    <p class="sec__lb">예담탐정은 이렇게 진행하지 않습니다</p>
-    <h2 class="sec__h2 fi">신뢰를 해치는 방식은<br>처음부터 지양합니다</h2>
+    <p class="sec__lb">상담 원칙</p>
+    <h2 class="sec__h2 fi">빠른 결론보다<br>기준 정리를 먼저 봅니다</h2>
     <div class="guard__grid">
       <div class="guard__card fi">
         <ul class="guard__list">
@@ -1124,8 +1198,8 @@ button{cursor:pointer;border:none;background:none;font-family:inherit;word-break
         </ul>
       </div>
       <div class="guard__card fi fd1">
-        <h3>먼저 필요한 것은 기준입니다</h3>
-        <p>예담탐정은 문제를 더 크게 만들기보다,현재 상황을 어떤 기준으로 봐야 하는지 먼저 정리하는 상담을 중요하게 생각합니다. 그 과정이 있어야 이후 판단도 덜 흔들릴 수 있기 때문입니다.</p>
+        <h3 style="color:#111827;">예담탐정이 먼저 보는 기준</h3>
+        <p style="color:#111827;">예담탐정은 문제를 더 크게 만들기보다,현재 상황을 어떤 기준으로 봐야 하는지 먼저 정리하는 상담을 중요하게 생각합니다. 그 과정이 있어야 이후 판단도 덜 흔들릴 수 있기 때문입니다.</p>
       </div>
     </div>
   </div>
@@ -1258,10 +1332,32 @@ button{cursor:pointer;border:none;background:none;font-family:inherit;word-break
   </div>
 </section>
 
+<!-- ═════════════════════ CONTACT GUIDE ═════════════════════ -->
+<section class="contact-guide" aria-label="문의 전 안내">
+  <div class="contact-guide__split">
+    <div class="contact-guide__badge fi">Before Contact</div>
+  </div>
+  <div class="contact-guide__in">
+    <div class="contact-guide__card fi">
+      <h2 class="contact-guide__title">이런 상황이면 지금 문의하셔도 됩니다</h2>
+      <p class="contact-guide__sub">문의 전 확실한 결론이 없어도 괜찮습니다. 지금 단계가 상담이 필요한지 모르더라도, 먼저 현재 상황을 짧게 설명해 주시면 어떤 기준으로 정리하면 좋을지 차분히 안내해드립니다.</p>
+      <div class="cta-now">
+        <ul class="cta-now__list">
+          <li class="cta-now__item">아직 확실하지 않아도 괜찮습니다</li>
+          <li class="cta-now__item">짧게 상황만 설명해도 괜찮습니다</li>
+          <li class="cta-now__item">상담만 먼저 받고 천천히 결정하셔도 됩니다</li>
+          <li class="cta-now__item">지금 단계가 상담이 필요한지 몰라도 먼저 물어보셔도 됩니다</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ══════════════════════════ FINAL CTA ══════════════════════════ -->
 <section class="cta-f" id="contact" aria-label="예담탐정 문의">
   <div class="cta-f__bg" aria-hidden="true"></div>
   <div class="cta-f__in">
+    <div class="cta-f__panel">
     <p class="sec__lb fi">문의하기</p>
     <h2 class="cta-f__h2 fi">
       혼자 판단하기 어렵다면<br>먼저 기준부터 안내해드리겠습니다.
@@ -1303,8 +1399,11 @@ button{cursor:pointer;border:none;background:none;font-family:inherit;word-break
       </div>
     </div>
 
-    <div class="cta-chs fi">
-      <!-- 전화: tel: → 즉시 전화 앱 호출 -->
+    <div class="cta-action-note fi">아직 확실하지 않아도 괜찮습니다. 짧게 설명해주시면 먼저 어떤 기준으로 정리하면 좋을지부터 안내해드립니다.</div>
+
+    <div class="cta-methodbox fi">
+      <div class="cta-minihead">가장 많이 사용하는 문의 방법</div>
+      <div class="cta-primary">
       <a href="tel:01032738199" class="cta-ch" aria-label="전화로 문의">
         <span class="cta-ch__ico" aria-hidden="true">📞</span>
         <div class="cta-ch__txt">
@@ -1312,42 +1411,42 @@ button{cursor:pointer;border:none;background:none;font-family:inherit;word-break
           <div class="cta-ch__vl">바로 통화로 상황 설명<span class="cta-ch__meta">010-3273-8199</span></div>
         </div>
       </a>
-
-      <!--
-        카카오톡: 개인 ID 친구추가 공식 웹 URL 없음 → 모달 처리.
-        모바일에서는 kakaotalk://launch 딥링크를 먼저 시도.
-      -->
       <button class="cta-ch" onclick="openKK()" aria-label="카카오톡으로 문의">
         <span class="cta-ch__ico" aria-hidden="true">💬</span>
         <div class="cta-ch__txt">
           <div class="cta-ch__lb">카카오톡</div>
-          <div class="cta-ch__vl">빠른 상담 문의<span class="cta-ch__meta">qjdduf3586</span></div>
+          <div class="cta-ch__vl">익명으로 먼저 문의하기<span class="cta-ch__meta">qjdduf3586</span></div>
         </div>
       </button>
+    </div>
+    </div>
 
-      <!-- 텔레그램: t.me 링크 → 앱 또는 웹 텔레그램 -->
+    <div class="cta-methodbox cta-methodbox--secondary fi">
+      <div class="cta-minihead">필요하면 이렇게도 문의할 수 있습니다</div>
+      <div class="cta-secondary">
       <a href="https://t.me/qjdduf3586" class="cta-ch" target="_blank" rel="noopener noreferrer" aria-label="텔레그램 익명 문의">
         <span class="cta-ch__ico" aria-hidden="true">✈️</span>
         <div class="cta-ch__txt">
-          <div class="cta-ch__lb">텔레그램 (익명)</div>
-          <div class="cta-ch__vl">익명으로 간단히 문의<span class="cta-ch__meta">@qjdduf3586</span></div>
+          <div class="cta-ch__lb">텔레그램</div>
+          <div class="cta-ch__vl">익명으로 편하게 문의하기<span class="cta-ch__meta">@qjdduf3586</span></div>
         </div>
       </a>
-
-      <!-- 이메일: mailto: → 즉시 메일 앱 호출 -->
       <a href="mailto:qjdduf@naver.com?subject=예담탐정 상담 문의" class="cta-ch" aria-label="이메일로 문의">
         <span class="cta-ch__ico" aria-hidden="true">✉️</span>
         <div class="cta-ch__txt">
           <div class="cta-ch__lb">이메일</div>
-          <div class="cta-ch__vl">정리된 내용 전달<span class="cta-ch__meta">qjdduf@naver.com</span></div>
+          <div class="cta-ch__vl">정리된 내용을 자세히 보내기<span class="cta-ch__meta">qjdduf@naver.com</span></div>
         </div>
       </a>
+    </div>
     </div>
 
     <div class="cta-chips fi">
       <span class="cta-chip">비밀 보장</span>
       <span class="cta-chip">익명 가능</span>
       <span class="cta-chip">대표 직접 상담</span>
+    </div>
+    <p class="cta-bottom-note fi">아직 확실하지 않아도 괜찮습니다. 짧게 남겨주시면 현재 상황을 어떤 기준으로 봐야 하는지부터 먼저 정리해드립니다.</p>
     </div>
   </div>
 </section>
@@ -1547,17 +1646,17 @@ if (stickyEl && contactEl) {
 <!-- ══════════════════════════ QUICK ACTIONS ══════════════════════════ -->
 <div class="quickbar" aria-label="빠른 문의">
   <a href="#prep" class="quickbar__btn quickbar__btn--gold">
-    <div><strong>상담 기준 먼저 확인하기</strong><span class="quickbar__sub">상담 전 체크리스트 보기</span></div>
+    <div><strong>상담 가능 여부 먼저 물어보기</strong><span class="quickbar__sub">체크리스트 먼저 보기</span></div>
   </a>
   <a href="#contact" class="quickbar__btn" aria-label="문의 방법 안내 구역으로 이동">
-    <div><strong>문의 방법 안내받기</strong><span class="quickbar__sub">전화·카카오톡·텔레그램·이메일 확인</span></div>
+    <div><strong>익명으로 먼저 문의하기</strong><span class="quickbar__sub">카카오톡·텔레그램·이메일·전화 확인</span></div>
   </a>
 </div>
 
 <div class="mobile-stick" aria-label="모바일 고정 문의 바">
   <div class="mobile-stick__row">
-    <a href="#prep" class="mobile-stick__btn mobile-stick__btn--line">체크리스트 보기</a>
-    <a href="#contact" class="mobile-stick__btn mobile-stick__btn--gold">문의 방법 안내</a>
+    <a href="#prep" class="mobile-stick__btn mobile-stick__btn--line">상담 가능 여부 먼저 물어보기</a>
+    <a href="#contact" class="mobile-stick__btn mobile-stick__btn--gold">익명으로 먼저 문의하기</a>
   </div>
 </div>
 </body>
