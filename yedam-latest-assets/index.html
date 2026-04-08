@@ -443,6 +443,38 @@ button{cursor:pointer;border:none;background:none;font-family:inherit;word-break
 .blog__card{transition:transform var(--dur) var(--ease),border-color var(--dur) var(--ease),box-shadow var(--dur) var(--ease)}
 .blog__card:hover{transform:translateY(-2px);border-color:rgba(182,148,106,.28);box-shadow:0 16px 30px rgba(0,0,0,.05)}
 .blog__meta{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:10px}
+
+/* 고정 문의 동선 */
+.quickbar{
+  position:fixed;right:18px;bottom:126px;z-index:90;
+  display:flex;flex-direction:column;gap:10px;
+}
+.quickbar__btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  min-width:210px;padding:14px 18px;border-radius:999px;
+  background:#17120d;color:#f5efe4;border:1px solid rgba(182,148,106,.24);
+  box-shadow:0 14px 34px rgba(0,0,0,.18);font-size:14px;font-weight:500;
+  transition:transform var(--dur) var(--ease),background var(--dur) var(--ease),border-color var(--dur) var(--ease);
+}
+.quickbar__btn strong{font-weight:500;color:#f5efe4}
+.quickbar__btn--gold{background:var(--gold);color:#120e0a;border-color:rgba(182,148,106,.55)}
+.quickbar__btn:hover{transform:translateY(-2px);border-color:rgba(182,148,106,.45)}
+.quickbar__btn--gold:hover{background:var(--gold-lt)}
+.quickbar__sub{display:block;font-size:11px;letter-spacing:.04em;opacity:.78}
+
+.mobile-stick{
+  display:none;position:fixed;left:0;right:0;bottom:0;z-index:95;
+  background:rgba(17,14,10,.94);backdrop-filter:blur(10px);
+  border-top:1px solid rgba(182,148,106,.2);padding:10px 12px calc(10px + env(safe-area-inset-bottom));
+}
+.mobile-stick__row{display:grid;grid-template-columns:1fr 1fr;gap:10px;max-width:720px;margin:0 auto}
+.mobile-stick__btn{
+  display:flex;align-items:center;justify-content:center;text-align:center;
+  min-height:48px;padding:10px 12px;border-radius:12px;font-size:13px;font-weight:500;
+}
+.mobile-stick__btn--line{background:#241b14;color:#f5efe4;border:1px solid rgba(182,148,106,.18)}
+.mobile-stick__btn--gold{background:var(--gold);color:#120e0a}
+
 .why__illus{width:100%;height:100%;min-height:360px;background:linear-gradient(135deg,#1a140f,#2a2017 55%,#17120d);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
 .why__illus::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 72% 28%,rgba(182,148,106,.16),transparent 35%),radial-gradient(circle at 22% 78%,rgba(182,148,106,.08),transparent 32%)}
 .why__illus svg{width:88%;max-width:420px;height:auto;opacity:.9;position:relative;z-index:1}
@@ -469,19 +501,35 @@ button{cursor:pointer;border:none;background:none;font-family:inherit;word-break
   gap:11px;margin-bottom:32px;max-width:540px;margin-left:auto;margin-right:auto;
 }
 .cta-ch{
-  display:flex;align-items:center;gap:13px;
+  display:flex;align-items:flex-start;gap:13px;
   background:rgba(255,255,255,.04);
   border:1px solid rgba(182,148,106,.16);
   border-radius:var(--r);padding:17px 20px;
   transition:all var(--dur) var(--ease);cursor:pointer;text-align:left;width:100%;
 }
 .cta-ch:hover{background:rgba(182,148,106,.08);border-color:rgba(182,148,106,.36);transform:translateY(-2px)}
-.cta-ch__ico{font-size:19px;flex-shrink:0}
+.cta-ch__ico{font-size:19px;flex-shrink:0;margin-top:2px}
+.cta-ch__txt{min-width:0;flex:1}
 .cta-ch__lb{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:400;margin-bottom:3px}
-.cta-ch__vl{font-size:14.5px;color:#f0e6d2;font-weight:400;letter-spacing:.02em;word-break:break-all}
+.cta-ch__vl{font-size:14.5px;color:#f0e6d2;font-weight:400;letter-spacing:.02em;line-height:1.55;word-break:keep-all;overflow-wrap:anywhere}
+.cta-ch__meta{display:block;margin-top:3px;font-size:15px;font-weight:500;letter-spacing:0;word-break:break-all}
 .cta-chips{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
 .cta-chip{font-size:12px;color:rgba(242,232,212,.28);display:flex;align-items:center;gap:5px}
 .cta-chip::before{content:'·';color:var(--gold);opacity:.4}
+
+.cta-note{max-width:620px;margin:0 auto 18px;padding:14px 16px;border:1px solid rgba(182,148,106,.18);border-radius:18px;background:rgba(255,255,255,.04)}
+.cta-note__title{font-size:13px;color:#f0e6d2;font-weight:500;margin-bottom:6px}
+.cta-note__text{font-size:13px;line-height:1.8;color:rgba(242,232,212,.72);font-weight:300;word-break:keep-all}
+.cta-note__badges{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-top:10px}
+.cta-note__badges span{font-size:11px;padding:4px 10px;border-radius:999px;background:rgba(182,148,106,.12);color:#f0e6d2;border:1px solid rgba(182,148,106,.16)}
+.cta-samples{max-width:620px;margin:0 auto 24px;text-align:left}
+.cta-samples__hd{font-size:13px;color:#f0e6d2;font-weight:500;margin-bottom:10px;text-align:center}
+.cta-samples__sub{font-size:12px;color:rgba(242,232,212,.58);margin:-3px 0 14px;text-align:center}
+.cta-samples__grid{display:grid;grid-template-columns:1fr;gap:10px}
+.cta-sample{display:flex;gap:10px;align-items:flex-start;justify-content:space-between;padding:12px 14px;border-radius:16px;background:rgba(255,255,255,.04);border:1px solid rgba(182,148,106,.14)}
+.cta-sample__txt{font-size:13px;line-height:1.7;color:#f0e6d2;flex:1;word-break:keep-all}
+.cta-sample__copy{flex-shrink:0;padding:8px 12px;border-radius:999px;background:rgba(182,148,106,.16);color:#f0e6d2;font-size:12px;border:1px solid rgba(182,148,106,.18);cursor:pointer}
+.cta-sample__copy:hover{background:rgba(182,148,106,.24)}
 
 /* ═══════════════════════════════════════
    11. FOOTER
@@ -603,17 +651,26 @@ button{cursor:pointer;border:none;background:none;font-family:inherit;word-break
   .svc__grid{grid-template-columns:repeat(2,1fr)}
   .proc__grid{grid-template-columns:repeat(2,1fr);gap:38px}
   .proc__grid::before{display:none}
-  .cta-chs{grid-template-columns:1fr;max-width:300px}
+  .cta-chs{grid-template-columns:1fr;max-width:320px}
+  .cta-note,.cta-samples{max-width:320px}
+  .cta-sample{flex-direction:column;align-items:stretch}
+  .cta-sample__copy{width:100%;text-align:center}
   .sticky{display:flex}
   .sec{padding:72px 0}
 }
 @media(max-width:560px){
+  body{padding-bottom:86px}
+  .quickbar{right:12px;bottom:122px;gap:8px}
+  .quickbar__btn{min-width:180px;padding:12px 14px}
+  .quickbar__sub{font-size:10px}
   .trust__grid{grid-template-columns:1fr;background:transparent;border:none;gap:1px}
   .trust__card{border:1px solid rgba(182,148,106,.09)}
   .svc__grid{grid-template-columns:1fr}
   .proc__grid{grid-template-columns:1fr;gap:28px}
   .hero__btns{flex-direction:column;align-items:center}
   .btn-g,.btn-o{width:100%;max-width:260px;justify-content:center}
+  .cta-ch{padding:16px 16px;min-height:76px}
+  .cta-ch__vl{font-size:13.5px;line-height:1.5;word-break:keep-all;overflow-wrap:anywhere}
   .footer__in{flex-direction:column;align-items:flex-start;gap:13px}
   .footer__lks{flex-wrap:wrap;gap:12px}
   .sec{padding:60px 0}
@@ -658,7 +715,7 @@ button{cursor:pointer;border:none;background:none;font-family:inherit;word-break
     <!-- PC CTA -->
     <!-- tel: 링크 → 클릭 즉시 전화 앱 호출 (PC/모바일 공통) -->
     <a href="tel:01032738199" class="nav__tel nav__tel-pc" aria-label="전화 상담 연결">
-      📞 010-3273-8199
+      상담 문의 010-3273-8199
     </a>
 
     <!-- 햄버거 -->
@@ -689,25 +746,17 @@ button{cursor:pointer;border:none;background:none;font-family:inherit;word-break
 
     <!-- H1: 페이지 전체에서 1개만 사용 -->
     <h1 class="hero__h1">
-      문제보다<br><em>마음을 먼저</em> 살핍니다
+      사람찾기·사실확인·<br><em>관계 문제 상담</em>
     </h1>
 
     <p class="hero__sub">
-      부산을 중심으로 사람찾기,사실확인,외도상담을 차분히 함께합니다.<br>
-      국내 전 지역 문의가 가능하며,사실 앞에 서기 전 마음부터 정리합니다.
+      부산 중심,국내 전 지역 문의 가능.<br>
+      빠른 답보다 기준부터 함께 정리합니다.
     </p>
 
     <div class="hero__btns">
-      <!-- tel: → 즉시 전화 연결 -->
-      <a href="tel:01032738199" class="btn-g">📞 전화 상담하기</a>
-      <!--
-        카카오톡 버튼:
-        개인 카카오톡 ID 친구추가를 웹에서 직접 여는 공식 URL 없음.
-        클릭 시 모달 → ID 안내 + 원터치 복사 흐름.
-      -->
-      <button class="btn-o" onclick="openKK()" aria-label="카카오톡 문의">
-        💬 카카오톡 문의
-      </button>
+      <a href="#prep" class="btn-g">체크리스트 먼저 보기</a>
+      <a href="#contact" class="btn-o" aria-label="문의 방법 안내 구역으로 이동">문의 방법 안내받기</a>
     </div>
   </div>
 
@@ -894,7 +943,7 @@ button{cursor:pointer;border:none;background:none;font-family:inherit;word-break
 
       <div class="faq__item" role="listitem">
         <button class="faq__q" aria-expanded="false" aria-controls="fa7">
-          상담만 먼저 받고 진행 여부는 나중에 결정해도 되나요?
+          상담만 먼저 받고 나중에 결정해도 되나요?
           <svg class="faq__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
         </button>
         <div class="faq__a" id="fa7" role="region">
@@ -904,7 +953,7 @@ button{cursor:pointer;border:none;background:none;font-family:inherit;word-break
 
       <div class="faq__item" role="listitem">
         <button class="faq__q" aria-expanded="false" aria-controls="fa8">
-          부산 전역 상담이 가능한가요?
+          부산 전역 문의가 가능한가요?
           <svg class="faq__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
         </button>
         <div class="faq__a" id="fa8" role="region">
@@ -914,7 +963,7 @@ button{cursor:pointer;border:none;background:none;font-family:inherit;word-break
 
       <div class="faq__item" role="listitem">
         <button class="faq__q" aria-expanded="false" aria-controls="fa9">
-          부산 외 지역이나 국내 다른 지역도 문의할 수 있나요?
+          부산 외 국내 다른 지역도 가능한가요?
           <svg class="faq__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
         </button>
         <div class="faq__a" id="fa9" role="region">
@@ -924,7 +973,7 @@ button{cursor:pointer;border:none;background:none;font-family:inherit;word-break
 
       <div class="faq__item" role="listitem">
         <button class="faq__q" aria-expanded="false" aria-controls="fa10">
-          대면 상담만 가능한가요,비대면 상담도 가능한가요?
+          비대면으로도 충분히 상담 가능한가요?
           <svg class="faq__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
         </button>
         <div class="faq__a" id="fa10" role="region">
@@ -1001,7 +1050,7 @@ button{cursor:pointer;border:none;background:none;font-family:inherit;word-break
 </section>
 
 <!-- ══════════════════════════ PREP CHECK ══════════════════════════ -->
-<section class="sec" aria-label="상담 전 준비하면 좋은 정보">
+<section class="sec" id="prep" aria-label="상담 전 준비하면 좋은 정보">
   <div class="W">
     <p class="sec__lb">상담 전 준비하면 좋은 정보</p>
     <h2 class="sec__h2 fi">처음 문의할 때<br>이 정도만 정리해도 충분합니다</h2>
@@ -1029,28 +1078,23 @@ button{cursor:pointer;border:none;background:none;font-family:inherit;word-break
   <div class="W">
     <p class="sec__lb">진행 방식</p>
     <h2 class="sec__h2 fi">
-      처음부터 끝까지<br>신중하게 진행합니다
+      문의 전 흐름을<br>간단히 안내드립니다
     </h2>
     <div class="proc__grid">
       <div class="proc-s fi">
         <div class="proc-n">1</div>
-        <h3 class="proc-t">비밀 상담 접수</h3>
-        <p class="proc-d">전화·카카오톡·텔레그램으로 상담이 가능합니다. 현재 상황을 있는 그대로 이야기해 주세요.</p>
+        <h3 class="proc-t">현재 상황 정리</h3>
+        <p class="proc-d">전화·카카오톡·텔레그램·이메일로 현재 상황을 조심스럽게 말씀해 주세요.</p>
       </div>
       <div class="proc-s fi fd1">
         <div class="proc-n">2</div>
-        <h3 class="proc-t">상황 정리 및 방향 설정</h3>
-        <p class="proc-d">의뢰인의 상황을 충분히 듣고, 필요한 정보와 진행 방향을 함께 정리합니다.</p>
+        <h3 class="proc-t">필요한 방향 안내</h3>
+        <p class="proc-d">무엇을 먼저 봐야 하는지,상담만 필요한지,진행이 필요한지 기준부터 함께 정리합니다.</p>
       </div>
       <div class="proc-s fi fd2">
         <div class="proc-n">3</div>
-        <h3 class="proc-t">신중한 조사 진행</h3>
-        <p class="proc-d">합법적인 범위 안에서 신중하게 진행합니다. 과정은 실시간으로 공유됩니다.</p>
-      </div>
-      <div class="proc-s fi fd3">
-        <div class="proc-n">4</div>
-        <h3 class="proc-t">결과 전달 및 사후 상담</h3>
-        <p class="proc-d">결과를 정확하게 전달하고, 이후 판단과 심리적 정리를 함께 이야기합니다.</p>
+        <h3 class="proc-t">진행 여부 결정</h3>
+        <p class="proc-d">정리된 내용을 바탕으로 진행 여부를 결정합니다. 무조건 진행을 권하지 않습니다.</p>
       </div>
     </div>
   </div>
@@ -1119,7 +1163,7 @@ button{cursor:pointer;border:none;background:none;font-family:inherit;word-break
 
       <div class="faq__item" role="listitem">
         <button class="faq__q" aria-expanded="false" aria-controls="fa1">
-          탐정과 흥신소는 어떤 차이가 있나요?
+          탐정과 흥신소,무엇이 다른가요?
           <svg class="faq__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
         </button>
         <div class="faq__a" id="fa1" role="region">
@@ -1131,7 +1175,7 @@ button{cursor:pointer;border:none;background:none;font-family:inherit;word-break
 
       <div class="faq__item" role="listitem">
         <button class="faq__q" aria-expanded="false" aria-controls="fa2">
-          사람찾기 상담 전 무엇을 준비하면 좋을까요?
+          정보가 적어도 사람찾기 상담이 가능한가요?
           <svg class="faq__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
         </button>
         <div class="faq__a" id="fa2" role="region">
@@ -1141,7 +1185,7 @@ button{cursor:pointer;border:none;background:none;font-family:inherit;word-break
 
       <div class="faq__item" role="listitem">
         <button class="faq__q" aria-expanded="false" aria-controls="fa3">
-          외도상담은 어떤 방식으로 진행되나요?
+          외도 의심도 먼저 정리 상담이 가능한가요?
           <svg class="faq__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
         </button>
         <div class="faq__a" id="fa3" role="region">
@@ -1151,7 +1195,7 @@ button{cursor:pointer;border:none;background:none;font-family:inherit;word-break
 
       <div class="faq__item" role="listitem">
         <button class="faq__q" aria-expanded="false" aria-controls="fa4">
-          심리상담도 함께 받을 수 있나요?
+          불안이 큰 상태에서도 상담이 가능한가요?
           <svg class="faq__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
         </button>
         <div class="faq__a" id="fa4" role="region">
@@ -1161,7 +1205,7 @@ button{cursor:pointer;border:none;background:none;font-family:inherit;word-break
 
       <div class="faq__item" role="listitem">
         <button class="faq__q" aria-expanded="false" aria-controls="fa5">
-          비밀 보장은 어떻게 이루어지나요?
+          상담 내용은 어떻게 비밀이 보장되나요?
           <svg class="faq__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
         </button>
         <div class="faq__a" id="fa5" role="region">
@@ -1171,7 +1215,7 @@ button{cursor:pointer;border:none;background:none;font-family:inherit;word-break
 
       <div class="faq__item" role="listitem">
         <button class="faq__q" aria-expanded="false" aria-controls="fa6">
-          비용은 어떻게 결정되나요?
+          상담 비용은 언제 안내되나요?
           <svg class="faq__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
         </button>
         <div class="faq__a" id="fa6" role="region">
@@ -1185,7 +1229,7 @@ button{cursor:pointer;border:none;background:none;font-family:inherit;word-break
 
 
 <!-- ══════════════════════════ BLOG LINKS ══════════════════════════ -->
-<section class="sec sec--wm" aria-label="먼저 읽어보면 좋은 글">
+<section class="sec sec--wm" id="blog-links" aria-label="먼저 읽어보면 좋은 글">
   <div class="W">
     <p class="sec__lb">먼저 읽어보면 좋은 글</p>
     <h2 class="sec__h2 fi">상담 전,블로그에서<br>기준부터 확인해보세요</h2>
@@ -1220,20 +1264,52 @@ button{cursor:pointer;border:none;background:none;font-family:inherit;word-break
   <div class="cta-f__in">
     <p class="sec__lb fi">문의하기</p>
     <h2 class="cta-f__h2 fi">
-      조심스럽게 연락해 주세요.<br>먼저 듣겠습니다.
+      혼자 판단하기 어렵다면<br>먼저 기준부터 안내해드리겠습니다.
     </h2>
     <p class="cta-f__sub fi">
       부산을 중심으로 상담을 진행하며,국내 전 지역 문의가 가능합니다.<br>
       모든 상담 내용은 철저히 비밀이 보장됩니다.
     </p>
+    <p class="cta-f__sub fi" style="max-width:760px;font-size:14px;opacity:.92;">
+      아직 확실하지 않아도 괜찮습니다. 무조건 진행을 권하지 않으며,상담만 먼저 받고 천천히 결정하셔도 됩니다.
+    </p>
+
+    <div class="cta-note fi">
+      <div class="cta-note__title">문의 전 가장 많이 망설이는 부분부터 줄였습니다</div>
+      <div class="cta-note__text">비용부터 바로 결정하지 않아도 됩니다. 현재 상황이 상담이 필요한 단계인지,무엇부터 정리하면 좋을지 먼저 물어보셔도 괜찮습니다.</div>
+      <div class="cta-note__badges">
+        <span>아직 확실하지 않아도 가능</span>
+        <span>상담만 먼저 가능</span>
+        <span>익명 문의 가능</span>
+      </div>
+    </div>
+
+    <div class="cta-samples fi">
+      <div class="cta-samples__hd">뭐라고 보내야 할지 막막하면 아래 문장을 그대로 보내셔도 됩니다</div>
+      <div class="cta-samples__sub">복사해서 카카오톡·텔레그램·이메일에 붙여넣어 보세요</div>
+      <div class="cta-samples__grid">
+        <div class="cta-sample">
+          <div class="cta-sample__txt">안녕하세요. 지금 상황이 상담이 필요한 단계인지 먼저 판단받고 싶습니다.</div>
+          <button class="cta-sample__copy" onclick="copyMsg(this)">복사</button>
+        </div>
+        <div class="cta-sample">
+          <div class="cta-sample__txt">안녕하세요. 사람찾기 관련해서 상담 가능한지 먼저 여쭤보고 싶습니다.</div>
+          <button class="cta-sample__copy" onclick="copyMsg(this)">복사</button>
+        </div>
+        <div class="cta-sample">
+          <div class="cta-sample__txt">안녕하세요. 사실확인이 필요한 상황인지 헷갈려서 문의드립니다.</div>
+          <button class="cta-sample__copy" onclick="copyMsg(this)">복사</button>
+        </div>
+      </div>
+    </div>
 
     <div class="cta-chs fi">
       <!-- 전화: tel: → 즉시 전화 앱 호출 -->
       <a href="tel:01032738199" class="cta-ch" aria-label="전화로 문의">
         <span class="cta-ch__ico" aria-hidden="true">📞</span>
-        <div>
+        <div class="cta-ch__txt">
           <div class="cta-ch__lb">전화 상담</div>
-          <div class="cta-ch__vl">010-3273-8199</div>
+          <div class="cta-ch__vl">바로 통화로 상황 설명<span class="cta-ch__meta">010-3273-8199</span></div>
         </div>
       </a>
 
@@ -1243,27 +1319,27 @@ button{cursor:pointer;border:none;background:none;font-family:inherit;word-break
       -->
       <button class="cta-ch" onclick="openKK()" aria-label="카카오톡으로 문의">
         <span class="cta-ch__ico" aria-hidden="true">💬</span>
-        <div>
+        <div class="cta-ch__txt">
           <div class="cta-ch__lb">카카오톡</div>
-          <div class="cta-ch__vl">qjdduf3586</div>
+          <div class="cta-ch__vl">빠른 상담 문의<span class="cta-ch__meta">qjdduf3586</span></div>
         </div>
       </button>
 
       <!-- 텔레그램: t.me 링크 → 앱 또는 웹 텔레그램 -->
       <a href="https://t.me/qjdduf3586" class="cta-ch" target="_blank" rel="noopener noreferrer" aria-label="텔레그램 익명 문의">
         <span class="cta-ch__ico" aria-hidden="true">✈️</span>
-        <div>
+        <div class="cta-ch__txt">
           <div class="cta-ch__lb">텔레그램 (익명)</div>
-          <div class="cta-ch__vl">@qjdduf3586</div>
+          <div class="cta-ch__vl">익명으로 간단히 문의<span class="cta-ch__meta">@qjdduf3586</span></div>
         </div>
       </a>
 
       <!-- 이메일: mailto: → 즉시 메일 앱 호출 -->
       <a href="mailto:qjdduf@naver.com?subject=예담탐정 상담 문의" class="cta-ch" aria-label="이메일로 문의">
         <span class="cta-ch__ico" aria-hidden="true">✉️</span>
-        <div>
+        <div class="cta-ch__txt">
           <div class="cta-ch__lb">이메일</div>
-          <div class="cta-ch__vl">qjdduf@naver.com</div>
+          <div class="cta-ch__vl">정리된 내용 전달<span class="cta-ch__meta">qjdduf@naver.com</span></div>
         </div>
       </a>
     </div>
@@ -1408,6 +1484,14 @@ document.getElementById('kkBackdrop').addEventListener('click', function(e) {
 });
 document.addEventListener('keydown', e => { if (e.key === 'Escape') closeKK(); });
 
+
+function copyMsg(btn){
+  const txt = btn.parentElement.querySelector('.cta-sample__txt').innerText.trim();
+  navigator.clipboard.writeText(txt).then(()=>{
+    const prev=btn.textContent; btn.textContent='복사 완료';
+    setTimeout(()=>btn.textContent=prev,1400);
+  });
+}
 function copyKK() {
   const id  = 'qjdduf3586';
   const btn = document.getElementById('kkCopyBtn');
@@ -1459,5 +1543,22 @@ if (stickyEl && contactEl) {
   }, { threshold: 0.1 }).observe(contactEl);
 }
 </script>
+
+<!-- ══════════════════════════ QUICK ACTIONS ══════════════════════════ -->
+<div class="quickbar" aria-label="빠른 문의">
+  <a href="#prep" class="quickbar__btn quickbar__btn--gold">
+    <div><strong>상담 기준 먼저 확인하기</strong><span class="quickbar__sub">상담 전 체크리스트 보기</span></div>
+  </a>
+  <a href="#contact" class="quickbar__btn" aria-label="문의 방법 안내 구역으로 이동">
+    <div><strong>문의 방법 안내받기</strong><span class="quickbar__sub">전화·카카오톡·텔레그램·이메일 확인</span></div>
+  </a>
+</div>
+
+<div class="mobile-stick" aria-label="모바일 고정 문의 바">
+  <div class="mobile-stick__row">
+    <a href="#prep" class="mobile-stick__btn mobile-stick__btn--line">체크리스트 보기</a>
+    <a href="#contact" class="mobile-stick__btn mobile-stick__btn--gold">문의 방법 안내</a>
+  </div>
+</div>
 </body>
 </html>
