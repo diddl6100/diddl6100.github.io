@@ -4,11 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>예담탐정 | 부산 탐정 상담·사람찾기·외도상담·심리상담 — 대표 정우열</title>
-<meta name="description" content="예담탐정은 부산을 중심으로 사람찾기, 외도상담, 사실확인, 심리상담을 함께하는 탐정입니다. 부산진구, 해운대구, 사하구, 동래구 등 부산 지역과 국내 전 지역 문의를 차분히 안내합니다.">
+<meta name="description" content="예담탐정은 부산을 중심으로 사람찾기, 외도상담, 사실확인, 심리상담을 함께하는 탐정입니다. 국내 전 지역 문의가 가능합니다.">
 <meta name="keywords" content="탐정,흥신소,사람찾기,외도상담,심리상담,사실확인,증거수집,탐정상담,예담탐정,정우열탐정">
 <meta name="robots" content="index, follow">
 <meta property="og:title"       content="예담탐정 | 문제보다 마음을 먼저 살핍니다">
-<meta property="og:description" content="부산을 중심으로 사람찾기·외도상담·사실확인·심리상담을 함께하는 예담탐정. 부산 지역과 국내 전 지역 문의를 차분히 안내합니다.">
+<meta property="og:description" content="부산을 중심으로 탐정 상담과 심리상담을 함께하는 예담탐정. 국내 전 지역 문의가 가능합니다.">
 <meta property="og:type"        content="website">
 <meta property="og:locale"      content="ko_KR">
 <meta property="og:image" content="https://diddl6100.github.io/og-image-latest.png">
@@ -27,7 +27,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300;400;500;600&family=Noto+Sans+KR:wght@300;400;500&family=Playfair+Display:ital,wght@0,500;1,400&display=swap" rel="stylesheet">
 <!-- JSON-LD 구조화 데이터 -->
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"LocalBusiness","name":"예담탐정","description":"부산을 중심으로 사람찾기, 외도상담, 사실확인, 증거수집, 탐정심리상담을 함께하는 예담탐정.","telephone":"010-3273-8199","email":"qjdduf@naver.com","founder":{"@type":"Person","name":"정우열"},"address":{"@type":"PostalAddress","addressLocality":"부산","addressRegion":"부산광역시","addressCountry":"KR"},"areaServed":[{"@type":"AdministrativeArea","name":"부산진구"},{"@type":"AdministrativeArea","name":"해운대구"},{"@type":"AdministrativeArea","name":"사하구"},{"@type":"AdministrativeArea","name":"동래구"},{"@type":"AdministrativeArea","name":"남구"},{"@type":"AdministrativeArea","name":"수영구"},{"@type":"Country","name":"대한민국"}],"openingHours":"Mo-Su 09:00-22:00"}
+{"@context":"https://schema.org","@type":"LocalBusiness","name":"예담탐정","description":"부산을 중심으로 사람찾기, 외도상담, 사실확인, 심리상담을 함께 생각하는 탐정. 국내 전 지역 문의 가능.","telephone":"010-3273-8199","email":"qjdduf@naver.com","founder":{"@type":"Person","name":"정우열"},"address":{"@type":"PostalAddress","addressLocality":"부산","addressRegion":"부산광역시","addressCountry":"KR"},"areaServed":[{"@type":"City","name":"부산"},{"@type":"AdministrativeArea","name":"부산진구"},{"@type":"AdministrativeArea","name":"해운대구"},{"@type":"AdministrativeArea","name":"사하구"},{"@type":"AdministrativeArea","name":"동래구"},{"@type":"AdministrativeArea","name":"남구"},{"@type":"AdministrativeArea","name":"수영구"},{"@type":"Country","name":"대한민국"}],"openingHours":"Mo-Su 09:00-22:00"}
 </script>
 
 <style>
@@ -427,6 +427,27 @@ button{cursor:pointer;border:none;background:none;font-family:inherit;word-break
 .faq__a.on{max-height:360px}
 .faq__ai{padding:2px 0 22px;font-size:14px;color:var(--muted);line-height:1.88;font-weight:300;word-break:keep-all}
 
+/* 추가 섹션 */
+.aud__grid,.prep__grid,.guard__grid,.blog__grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:30px}
+.aud__card,.prep__card,.guard__card,.blog__card,.region-box{
+  background:#fff;border:1px solid var(--bdlt);border-radius:var(--r);padding:24px 22px;
+  box-shadow:0 10px 30px rgba(0,0,0,.03)
+}
+.aud__card h3,.prep__card h3,.guard__card h3,.blog__card h3{font-family:var(--serif);font-size:17px;color:var(--ink);margin-bottom:8px;word-break:keep-all}
+.aud__card p,.prep__card p,.guard__card p,.blog__card p,.region-box p{font-size:14px;color:var(--muted);line-height:1.82;font-weight:300;word-break:keep-all}
+.prep__list,.guard__list{list-style:none;display:flex;flex-direction:column;gap:12px}
+.prep__list li,.guard__list li{font-size:14px;color:var(--muted);line-height:1.8;padding-left:18px;position:relative}
+.prep__list li::before,.guard__list li::before{content:'·';position:absolute;left:4px;top:0;color:var(--gold);font-size:18px;line-height:1}
+.region-box{margin-top:26px;background:linear-gradient(180deg,#fff,#faf6f0)}
+.region-box strong{color:var(--ink);font-weight:500}
+.blog__card{transition:transform var(--dur) var(--ease),border-color var(--dur) var(--ease),box-shadow var(--dur) var(--ease)}
+.blog__card:hover{transform:translateY(-2px);border-color:rgba(182,148,106,.28);box-shadow:0 16px 30px rgba(0,0,0,.05)}
+.blog__meta{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:10px}
+.why__illus{width:100%;height:100%;min-height:360px;background:linear-gradient(135deg,#1a140f,#2a2017 55%,#17120d);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.why__illus::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 72% 28%,rgba(182,148,106,.16),transparent 35%),radial-gradient(circle at 22% 78%,rgba(182,148,106,.08),transparent 32%)}
+.why__illus svg{width:88%;max-width:420px;height:auto;opacity:.9;position:relative;z-index:1}
+@media (max-width:768px){.aud__grid,.prep__grid,.guard__grid,.blog__grid{grid-template-columns:1fr}.why__illus{min-height:300px}}
+
 /* ═══════════════════════════════════════
    10. FINAL CTA
 ═══════════════════════════════════════ */
@@ -672,8 +693,8 @@ button{cursor:pointer;border:none;background:none;font-family:inherit;word-break
     </h1>
 
     <p class="hero__sub">
-      부산을 중심으로 한 탐정 상담부터 심리상담까지.<br>
-      사실 앞에 서기 전, 마음부터 정리합니다.
+      부산을 중심으로 사람찾기,사실확인,외도상담을 차분히 함께합니다.<br>
+      국내 전 지역 문의가 가능하며,사실 앞에 서기 전 마음부터 정리합니다.
     </p>
 
     <div class="hero__btns">
@@ -724,6 +745,32 @@ button{cursor:pointer;border:none;background:none;font-family:inherit;word-break
       <p class="trust__d">사실 확인과 함께 의뢰인의 심리적 안정을 늘 함께 고려합니다.</p>
     </div>
 
+  </div>
+</section>
+
+<!-- ══════════════════════════ AUDIENCE FIT ══════════════════════════ -->
+<section class="sec sec--wm" aria-label="예담탐정 상담이 잘 맞는 분들">
+  <div class="W">
+    <p class="sec__lb">이런 분들이 많이 찾아옵니다</p>
+    <h2 class="sec__h2 fi">내 상황에 맞는지<br>먼저 확인해보세요</h2>
+    <div class="aud__grid">
+      <article class="aud__card fi">
+        <h3>혼자 판단할수록 더 헷갈리는 분</h3>
+        <p>사실과 해석이 섞이기 시작하고,같은 생각이 반복될수록 기준이 흐려진다면 현재 상황을 먼저 정리해보는 상담이 도움이 될 수 있습니다.</p>
+      </article>
+      <article class="aud__card fi fd1">
+        <h3>사람찾기 전 무엇부터 준비할지 막막한 분</h3>
+        <p>정보가 많지 않아도 괜찮습니다. 지금 알고 있는 내용이 사실인지,오래된 기억인지부터 차분히 나누는 과정이 먼저 필요할 수 있습니다.</p>
+      </article>
+      <article class="aud__card fi fd2">
+        <h3>외도 의심이나 사실확인 문제로 흔들리는 분</h3>
+        <p>지금 느끼는 위화감이 실제로 확인이 필요한 문제인지,내가 너무 급하게 결론을 향해 가고 있는지부터 함께 살펴보는 접근이 중요합니다.</p>
+      </article>
+      <article class="aud__card fi fd3">
+        <h3>빠른 결론보다 기준부터 세우고 싶은 분</h3>
+        <p>예담탐정은 감정을 자극해 결론을 밀어붙이기보다,현재 상황을 어떤 기준으로 봐야 하는지부터 조심스럽게 안내합니다.</p>
+      </article>
+    </div>
   </div>
 </section>
 
@@ -783,26 +830,26 @@ button{cursor:pointer;border:none;background:none;font-family:inherit;word-break
       <!-- 좌: 비주얼 -->
       <div class="why__vis fi">
         <div class="why__img">
-          <svg viewBox="0 0 800 1000" aria-label="따뜻한 조명 아래 상담 테이블과 노트가 놓인 예담탐정 상담 공간 이미지" role="img" style="width:100%;height:100%;display:block" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <linearGradient id="whyg" x1="0" y1="0" x2="1" y2="1">
-                <stop offset="0%" stop-color="#231a12"/>
-                <stop offset="55%" stop-color="#36281c"/>
-                <stop offset="100%" stop-color="#150f0a"/>
-              </linearGradient>
-            </defs>
-            <rect width="800" height="1000" fill="url(#whyg)"/>
-            <rect x="90" y="150" width="620" height="520" rx="28" fill="#efe1c7" opacity="0.10"/>
-            <rect x="120" y="220" width="560" height="360" rx="18" fill="#f3e8d3" opacity="0.08"/>
-            <rect x="150" y="640" width="500" height="34" rx="8" fill="#c9a86a" opacity="0.32"/>
-            <rect x="170" y="280" width="220" height="22" rx="8" fill="#e7d8ba" opacity="0.35"/>
-            <rect x="170" y="330" width="310" height="16" rx="8" fill="#e7d8ba" opacity="0.22"/>
-            <rect x="170" y="368" width="280" height="16" rx="8" fill="#e7d8ba" opacity="0.22"/>
-            <rect x="170" y="406" width="340" height="16" rx="8" fill="#e7d8ba" opacity="0.22"/>
-            <circle cx="590" cy="760" r="86" fill="#c9a86a" opacity="0.22"/>
-            <rect x="560" y="560" width="18" height="170" rx="9" fill="#e4c996" opacity="0.70" transform="rotate(-20 560 560)"/>
-            <text x="70" y="930" fill="#f1e6d2" opacity="0.82" font-family="Arial, sans-serif" font-size="34">YEDAM DETECTIVE</text>
-          </svg>
+          <div class="why__illus" aria-hidden="true">
+            <svg viewBox="0 0 420 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="52" y="212" width="316" height="8" rx="3" fill="#b6946a" opacity=".42"/>
+              <rect x="56" y="220" width="8" height="64" rx="3" fill="#b6946a" opacity=".20"/>
+              <rect x="356" y="220" width="8" height="64" rx="3" fill="#b6946a" opacity=".20"/>
+              <rect x="132" y="152" width="88" height="46" rx="4" fill="#d6b28a" opacity=".26" transform="rotate(-4 132 152)"/>
+              <line x1="144" y1="168" x2="208" y2="164" stroke="#d6b28a" opacity=".32"/>
+              <line x1="144" y1="176" x2="205" y2="173" stroke="#d6b28a" opacity=".25"/>
+              <line x1="144" y1="184" x2="189" y2="181" stroke="#d6b28a" opacity=".2"/>
+              <rect x="230" y="158" width="5" height="40" rx="2.5" fill="#d6b28a" opacity=".32" transform="rotate(14 230 158)"/>
+              <ellipse cx="285" cy="205" rx="20" ry="6" fill="#d6b28a" opacity=".16"/>
+              <rect x="266" y="176" width="38" height="29" rx="6" fill="#d6b28a" opacity=".16"/>
+              <path d="M304 184C314 187 315 196 304 199" stroke="#d6b28a" stroke-width="2" opacity=".22"/>
+              <rect x="288" y="54" width="86" height="118" rx="4" fill="#d6b28a" opacity=".07"/>
+              <line x1="331" y1="54" x2="331" y2="172" stroke="#d6b28a" opacity=".16"/>
+              <line x1="288" y1="113" x2="374" y2="113" stroke="#d6b28a" opacity=".16"/>
+              <polygon points="288,54 374,54 398,205 250,205" fill="#d6b28a" opacity=".08"/>
+              <circle cx="100" cy="84" r="38" fill="#d6b28a" opacity=".08"/>
+            </svg>
+          </div>
         </div>
         <div class="why__badge">
           <span class="why__badge-n">10+</span>
@@ -844,36 +891,46 @@ button{cursor:pointer;border:none;background:none;font-family:inherit;word-break
             </div>
           </div>
         </div>
-      </div>
 
       <div class="faq__item" role="listitem">
         <button class="faq__q" aria-expanded="false" aria-controls="fa7">
-          부산 전역 상담이 가능한가요?
+          상담만 먼저 받고 진행 여부는 나중에 결정해도 되나요?
           <svg class="faq__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
         </button>
         <div class="faq__a" id="fa7" role="region">
-          <p class="faq__ai">가능합니다. 예담탐정은 부산을 중심으로 부산진구,해운대구,사하구,동래구,남구,수영구 등 부산 지역 상담 문의를 안내하고 있습니다.</p>
+          <p class="faq__ai">가능합니다. 예담탐정은 처음부터 진행을 권하기보다,현재 상황을 어떤 기준으로 봐야 하는지 먼저 함께 정리하는 상담을 중요하게 생각합니다.</p>
         </div>
       </div>
 
       <div class="faq__item" role="listitem">
         <button class="faq__q" aria-expanded="false" aria-controls="fa8">
-          부산 외 지역이나 국내 다른 지역도 문의할 수 있나요?
+          부산 전역 상담이 가능한가요?
           <svg class="faq__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
         </button>
         <div class="faq__a" id="fa8" role="region">
-          <p class="faq__ai">가능합니다. 예담탐정은 부산을 중심으로 상담을 진행하고 있으며,서울,경기,인천을 포함한 국내 전 지역 문의가 가능합니다. 현재 상황과 필요한 범위를 말씀해주시면 지역에 맞는 방향으로 차분히 안내드립니다.</p>
+          <p class="faq__ai">가능합니다. 예담탐정은 부산을 중심으로 부산진구,해운대구,사하구,동래구,남구,수영구 등 부산 지역 상담 문의를 안내하고 있습니다.</p>
         </div>
       </div>
 
       <div class="faq__item" role="listitem">
         <button class="faq__q" aria-expanded="false" aria-controls="fa9">
-          대면 상담만 가능한가요,비대면 상담도 가능한가요?
+          부산 외 지역이나 국내 다른 지역도 문의할 수 있나요?
           <svg class="faq__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
         </button>
         <div class="faq__a" id="fa9" role="region">
-          <p class="faq__ai">전화,카카오톡,텔레그램 등을 통한 비대면 상담이 가능합니다. 상황에 따라 먼저 비대면으로 현재 상태를 정리한 뒤 필요한 방향을 함께 안내드립니다.</p>
+          <p class="faq__ai">가능합니다. 예담탐정은 부산을 중심으로 상담을 진행하고 있으며,국내 전 지역 문의가 가능합니다. 현재 상황과 필요한 범위를 말씀해주시면 차분히 안내드립니다.</p>
         </div>
+      </div>
+
+      <div class="faq__item" role="listitem">
+        <button class="faq__q" aria-expanded="false" aria-controls="fa10">
+          대면 상담만 가능한가요,비대면 상담도 가능한가요?
+          <svg class="faq__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="faq__a" id="fa10" role="region">
+          <p class="faq__ai">전화,카카오톡,텔레그램을 통한 비대면 상담이 가능합니다. 상황에 따라 먼저 비대면으로 현재 상태를 정리한 뒤 필요한 방향을 함께 안내드립니다.</p>
+        </div>
+      </div>
       </div>
 
     </div>
@@ -943,6 +1000,29 @@ button{cursor:pointer;border:none;background:none;font-family:inherit;word-break
   </div>
 </section>
 
+<!-- ══════════════════════════ PREP CHECK ══════════════════════════ -->
+<section class="sec" aria-label="상담 전 준비하면 좋은 정보">
+  <div class="W">
+    <p class="sec__lb">상담 전 준비하면 좋은 정보</p>
+    <h2 class="sec__h2 fi">처음 문의할 때<br>이 정도만 정리해도 충분합니다</h2>
+    <div class="prep__grid">
+      <div class="prep__card fi">
+        <h3>먼저 적어보면 좋은 것</h3>
+        <ul class="prep__list">
+          <li>지금 가장 마음에 걸리는 장면 1가지</li>
+          <li>직접 확인한 사실과 아직 추정인 내용</li>
+          <li>마지막으로 확인된 시점이나 연락 시기</li>
+          <li>지금 상담에서 알고 싶은 것 1가지</li>
+        </ul>
+      </div>
+      <div class="prep__card fi fd1">
+        <h3>꼭 완벽할 필요는 없습니다</h3>
+        <p>정보가 많지 않아도 괜찮습니다. 예담탐정은 처음부터 결론을 단정하기보다,현재 상황을 어떤 기준으로 봐야 하는지부터 함께 정리하는 상담을 중요하게 생각합니다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 
 <!-- ══════════════════════════ PROCESS ══════════════════════════ -->
 <section class="sec sec--dk" id="process" aria-label="예담탐정 진행 방식">
@@ -976,6 +1056,37 @@ button{cursor:pointer;border:none;background:none;font-family:inherit;word-break
   </div>
 </section>
 
+<!-- ══════════════════════════ REGION GUIDE ══════════════════════════ -->
+<section class="sec sec--wm" aria-label="지역 안내">
+  <div class="W">
+    <div class="region-box fi">
+      <p><strong>예담탐정은 부산을 중심으로 상담을 진행하며,부산진구·해운대구·사하구·동래구·남구·수영구를 포함한 부산 지역 문의를 차분히 안내합니다.</strong><br>부산 외 지역도 국내 전 지역 문의가 가능합니다. 지역보다 중요한 것은 현재 상황과 필요한 범위이므로,먼저 내용을 말씀해주시면 적절한 방향으로 안내드립니다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════ WE DON'T ══════════════════════════ -->
+<section class="sec" aria-label="예담탐정은 이렇게 진행하지 않습니다">
+  <div class="W">
+    <p class="sec__lb">예담탐정은 이렇게 진행하지 않습니다</p>
+    <h2 class="sec__h2 fi">신뢰를 해치는 방식은<br>처음부터 지양합니다</h2>
+    <div class="guard__grid">
+      <div class="guard__card fi">
+        <ul class="guard__list">
+          <li>감정만 자극해 성급한 결론을 유도하지 않습니다</li>
+          <li>확인되지 않은 내용을 먼저 단정하지 않습니다</li>
+          <li>무조건 진행을 권하거나 범위를 과하게 넓히지 않습니다</li>
+          <li>합법 범위를 벗어나는 방식은 처음부터 안내하지 않습니다</li>
+        </ul>
+      </div>
+      <div class="guard__card fi fd1">
+        <h3>먼저 필요한 것은 기준입니다</h3>
+        <p>예담탐정은 문제를 더 크게 만들기보다,현재 상황을 어떤 기준으로 봐야 하는지 먼저 정리하는 상담을 중요하게 생각합니다. 그 과정이 있어야 이후 판단도 덜 흔들릴 수 있기 때문입니다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 
 <!-- ══════════════════════════ BRAND QUOTE ══════════════════════════ -->
 <section class="sec sec--wm" aria-label="예담탐정 브랜드 철학">
@@ -992,22 +1103,6 @@ button{cursor:pointer;border:none;background:none;font-family:inherit;word-break
       </p>
       <div class="qt__sig fi">— 예담탐정 대표 정우열</div>
     </div>
-  </div>
-
-</section>
-
-
-<!-- ══════════════════════════ REGION GUIDE ══════════════════════════ -->
-<section class="sec sec--wm" aria-label="예담탐정 지역 안내">
-  <div class="Ws">
-    <p class="sec__lb">지역 안내</p>
-    <h2 class="sec__h2 fi">
-      부산을 중심으로,<br>국내 전 지역 문의가 가능합니다
-    </h2>
-    <p class="sec__desc fi">
-      예담탐정은 부산을 중심으로 상담을 진행하며,부산진구,해운대구,사하구,동래구,남구,수영구 등 부산 지역 문의를 차분히 안내합니다.
-      또한 서울,경기,인천을 포함한 국내 전 지역 문의가 가능하므로,지역과 관계없이 현재 상황과 필요한 범위를 말씀해 주시면 됩니다.
-    </p>
   </div>
 </section>
 
@@ -1089,6 +1184,36 @@ button{cursor:pointer;border:none;background:none;font-family:inherit;word-break
 </section>
 
 
+<!-- ══════════════════════════ BLOG LINKS ══════════════════════════ -->
+<section class="sec sec--wm" aria-label="먼저 읽어보면 좋은 글">
+  <div class="W">
+    <p class="sec__lb">먼저 읽어보면 좋은 글</p>
+    <h2 class="sec__h2 fi">상담 전,블로그에서<br>기준부터 확인해보세요</h2>
+    <div class="blog__grid">
+      <a class="blog__card fi" href="https://blog.naver.com/yedamdetective/224224073747" target="_blank" rel="noopener noreferrer">
+        <div class="blog__meta">사람찾기</div>
+        <h3>사람찾기 전에 꼭 알아야 할 현실적인 기준</h3>
+        <p>정보가 많지 않아도 먼저 무엇을 정리하면 좋은지,사람찾기 전 기본 기준을 차분히 설명한 글입니다.</p>
+      </a>
+      <a class="blog__card fi fd1" href="https://blog.naver.com/yedamdetective/224224078974" target="_blank" rel="noopener noreferrer">
+        <div class="blog__meta">탐정·흥신소 정보</div>
+        <h3>탐정과 흥신소의 차이,상담 전에 꼭 알아야 할 기준</h3>
+        <p>탐정과 흥신소를 어떻게 구분해서 봐야 하는지,상담 전 무엇을 먼저 확인하면 좋은지 정리한 글입니다.</p>
+      </a>
+      <a class="blog__card fi fd2" href="https://blog.naver.com/yedamdetective/224225079711" target="_blank" rel="noopener noreferrer">
+        <div class="blog__meta">탐정심리상담</div>
+        <h3>불안이 커질수록 확신처럼 느껴지는 이유</h3>
+        <p>사실과 해석이 섞일 때 왜 판단이 더 흔들리는지,혼자 생각할수록 더 단정하게 될 수 있는 이유를 다룹니다.</p>
+      </a>
+      <a class="blog__card fi fd3" href="https://blog.naver.com/yedamdetective" target="_blank" rel="noopener noreferrer">
+        <div class="blog__meta">블로그 전체보기</div>
+        <h3>예담탐정 블로그에서 더 많은 기준 글 보기</h3>
+        <p>사람찾기,사실확인,외도상담,마음정리와 관련된 글을 먼저 읽어보시고 현재 상황을 차분히 점검해보실 수 있습니다.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
 <!-- ══════════════════════════ FINAL CTA ══════════════════════════ -->
 <section class="cta-f" id="contact" aria-label="예담탐정 문의">
   <div class="cta-f__bg" aria-hidden="true"></div>
@@ -1098,7 +1223,8 @@ button{cursor:pointer;border:none;background:none;font-family:inherit;word-break
       조심스럽게 연락해 주세요.<br>먼저 듣겠습니다.
     </h2>
     <p class="cta-f__sub fi">
-      부산을 중심으로,국내 전 지역 문의를 차분히 안내합니다. 모든 상담 내용은 철저히 비밀이 보장됩니다.
+      부산을 중심으로 상담을 진행하며,국내 전 지역 문의가 가능합니다.<br>
+      모든 상담 내용은 철저히 비밀이 보장됩니다.
     </p>
 
     <div class="cta-chs fi">
