@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://diddl6100.github.io/sitemap.xml
+Sitemap: https://xn--jk1bx4eorq.site/sitemap.xml
